@@ -1,0 +1,716 @@
+//! **************************************************************************
+// Written by: Map P.68d on Wed Nov 11 16:38:50 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rx" LOCATE = SITE "A16" LEVEL 1;
+COMP "tx" LOCATE = SITE "B16" LEVEL 1;
+COMP "ld0" LOCATE = SITE "U18" LEVEL 1;
+COMP "ld1" LOCATE = SITE "M14" LEVEL 1;
+COMP "ld2" LOCATE = SITE "N14" LEVEL 1;
+COMP "ld3" LOCATE = SITE "L14" LEVEL 1;
+COMP "ld4" LOCATE = SITE "M13" LEVEL 1;
+COMP "ld5" LOCATE = SITE "D4" LEVEL 1;
+COMP "ld6" LOCATE = SITE "P16" LEVEL 1;
+COMP "ld7" LOCATE = SITE "N12" LEVEL 1;
+COMP "sw0" LOCATE = SITE "A10" LEVEL 1;
+COMP "sw1" LOCATE = SITE "D14" LEVEL 1;
+COMP "sw2" LOCATE = SITE "C14" LEVEL 1;
+COMP "sw3" LOCATE = SITE "P15" LEVEL 1;
+COMP "sw4" LOCATE = SITE "P12" LEVEL 1;
+COMP "sw5" LOCATE = SITE "R5" LEVEL 1;
+COMP "sw6" LOCATE = SITE "T5" LEVEL 1;
+COMP "sw7" LOCATE = SITE "E4" LEVEL 1;
+COMP "SYNC" LOCATE = SITE "U17" LEVEL 1;
+COMP "btnc" LOCATE = SITE "F5" LEVEL 1;
+COMP "btnd" LOCATE = SITE "P3" LEVEL 1;
+COMP "btnl" LOCATE = SITE "P4" LEVEL 1;
+COMP "btnr" LOCATE = SITE "F6" LEVEL 1;
+COMP "btnu" LOCATE = SITE "N4" LEVEL 1;
+COMP "PMOD1" LOCATE = SITE "T3" LEVEL 1;
+COMP "PMOD2" LOCATE = SITE "R3" LEVEL 1;
+COMP "PMOD3" LOCATE = SITE "P6" LEVEL 1;
+COMP "PMOD4" LOCATE = SITE "N5" LEVEL 1;
+COMP "PMOD7" LOCATE = SITE "V9" LEVEL 1;
+COMP "PMOD8" LOCATE = SITE "T9" LEVEL 1;
+COMP "PMOD9" LOCATE = SITE "V4" LEVEL 1;
+COMP "reset_n" LOCATE = SITE "T15" LEVEL 1;
+COMP "PMOD10" LOCATE = SITE "T4" LEVEL 1;
+COMP "VHDC1N" LOCATE = SITE "V16" LEVEL 1;
+COMP "VHDC2N" LOCATE = SITE "V15" LEVEL 1;
+COMP "VHDC1P" LOCATE = SITE "U16" LEVEL 1;
+COMP "VHDC3N" LOCATE = SITE "V13" LEVEL 1;
+COMP "VHDC2P" LOCATE = SITE "U15" LEVEL 1;
+COMP "VHDC4N" LOCATE = SITE "N11" LEVEL 1;
+COMP "VHDC3P" LOCATE = SITE "U13" LEVEL 1;
+COMP "VHDC5N" LOCATE = SITE "T11" LEVEL 1;
+COMP "VHDC4P" LOCATE = SITE "M11" LEVEL 1;
+COMP "VHDC6N" LOCATE = SITE "V12" LEVEL 1;
+COMP "VHDC5P" LOCATE = SITE "R11" LEVEL 1;
+COMP "VHDC7N" LOCATE = SITE "P11" LEVEL 1;
+COMP "VHDC6P" LOCATE = SITE "T12" LEVEL 1;
+COMP "VHDC8N" LOCATE = SITE "N9" LEVEL 1;
+COMP "VHDC7P" LOCATE = SITE "N10" LEVEL 1;
+COMP "VHDC9N" LOCATE = SITE "V11" LEVEL 1;
+COMP "VHDC8P" LOCATE = SITE "M10" LEVEL 1;
+COMP "VHDC9P" LOCATE = SITE "U11" LEVEL 1;
+COMP "clockext100MHz" LOCATE = SITE "L15" LEVEL 1;
+COMP "SDATA_OUT" LOCATE = SITE "N16" LEVEL 1;
+COMP "BIT_CLK" LOCATE = SITE "L13" LEVEL 1;
+COMP "SDATA_IN" LOCATE = SITE "T18" LEVEL 1;
+COMP "VHDC10N" LOCATE = SITE "T10" LEVEL 1;
+COMP "VHDC11N" LOCATE = SITE "V10" LEVEL 1;
+COMP "VHDC10P" LOCATE = SITE "R10" LEVEL 1;
+COMP "VHDC20N" LOCATE = SITE "V5" LEVEL 1;
+COMP "VHDC12N" LOCATE = SITE "T8" LEVEL 1;
+COMP "VHDC11P" LOCATE = SITE "U10" LEVEL 1;
+COMP "VHDC20P" LOCATE = SITE "U5" LEVEL 1;
+COMP "VHDC13N" LOCATE = SITE "N8" LEVEL 1;
+COMP "VHDC12P" LOCATE = SITE "R8" LEVEL 1;
+COMP "VHDC14N" LOCATE = SITE "V8" LEVEL 1;
+COMP "VHDC13P" LOCATE = SITE "M8" LEVEL 1;
+COMP "VHDC15N" LOCATE = SITE "V7" LEVEL 1;
+COMP "VHDC14P" LOCATE = SITE "U8" LEVEL 1;
+COMP "VHDC16N" LOCATE = SITE "P8" LEVEL 1;
+COMP "VHDC15P" LOCATE = SITE "U7" LEVEL 1;
+COMP "VHDC17N" LOCATE = SITE "V6" LEVEL 1;
+COMP "VHDC16P" LOCATE = SITE "N7" LEVEL 1;
+COMP "VHDC18N" LOCATE = SITE "T7" LEVEL 1;
+COMP "VHDC17P" LOCATE = SITE "T6" LEVEL 1;
+COMP "VHDC19N" LOCATE = SITE "P7" LEVEL 1;
+COMP "VHDC18P" LOCATE = SITE "R7" LEVEL 1;
+COMP "VHDC19P" LOCATE = SITE "N6" LEVEL 1;
+COMP "RESET_N" LOCATE = SITE "T17" LEVEL 1;
+TIMEGRP clock_freq = BEL "Lr0_0" BEL "Lr0_1" BEL "Lr0_2" BEL "Lr0_3" BEL
+        "Lr0_4" BEL "Lr0_5" BEL "Lr0_6" BEL "Lr0_7" BEL "Lr0_8" BEL "Lr0_9"
+        BEL "Lr0_10" BEL "Lr0_11" BEL "Lr0_12" BEL "Lr0_13" BEL "Lr0_14" BEL
+        "Lr0_15" BEL "Lr0_16" BEL "Lr0_17" BEL "Rr0_0" BEL "Rr0_1" BEL "Rr0_2"
+        BEL "Rr0_3" BEL "Rr0_4" BEL "Rr0_5" BEL "Rr0_6" BEL "Rr0_7" BEL
+        "Rr0_8" BEL "Rr0_9" BEL "Rr0_10" BEL "Rr0_11" BEL "Rr0_12" BEL
+        "Rr0_13" BEL "Rr0_14" BEL "Rr0_15" BEL "Rr0_16" BEL "Rr0_17" BEL
+        "Lr1_0" BEL "Lr1_1" BEL "Lr1_2" BEL "Lr1_3" BEL "Lr1_4" BEL "Lr1_5"
+        BEL "Lr1_6" BEL "Lr1_7" BEL "Lr1_8" BEL "Lr1_9" BEL "Lr1_10" BEL
+        "Lr1_11" BEL "Lr1_12" BEL "Lr1_13" BEL "Lr1_14" BEL "Lr1_15" BEL
+        "Lr1_16" BEL "Lr1_17" BEL "uart_1/bittxcount_3" BEL
+        "uart_1/bittxcount_2" BEL "uart_1/bittxcount_0" BEL
+        "uart_1/bittxcount_1" BEL "uart_1/baudtxcount_3" BEL
+        "uart_1/baudtxcount_0" BEL "uart_1/baudrxcount_3" BEL
+        "uart_1/baudrxcount_0" BEL "uart_1/bitrxcount_3" BEL
+        "uart_1/bitrxcount_2" BEL "uart_1/bitrxcount_0" BEL
+        "uart_1/bitrxcount_1" BEL "uart_1/dout_7" BEL "uart_1/dout_6" BEL
+        "uart_1/dout_5" BEL "uart_1/dout_4" BEL "uart_1/dout_3" BEL
+        "uart_1/dout_2" BEL "uart_1/dout_1" BEL "uart_1/dout_0" BEL
+        "uart_1/txdata_8" BEL "uart_1/txdata_7" BEL "uart_1/txdata_6" BEL
+        "uart_1/txdata_5" BEL "uart_1/txdata_4" BEL "uart_1/txdata_3" BEL
+        "uart_1/txdata_2" BEL "uart_1/txdata_1" BEL "uart_1/txdata_0" BEL
+        "uart_1/rxdata_8" BEL "uart_1/rxdata_7" BEL "uart_1/rxdata_6" BEL
+        "uart_1/rxdata_5" BEL "uart_1/rxdata_4" BEL "uart_1/rxdata_3" BEL
+        "uart_1/rxdata_2" BEL "uart_1/rxdata_1" BEL "uart_1/rx3" BEL
+        "uart_1/rx2" BEL "uart_1/rx1" BEL
+        "LM4550_controler_1/SYNC_REGISTER_READY" BEL
+        "LM4550_controler_1/STATE_REG_3" BEL "LM4550_controler_1/STATE_REG_2"
+        BEL "LM4550_controler_1/STATE_REG_1" BEL
+        "LM4550_controler_1/STATE_REG_0" BEL
+        "LM4550_controler_1/NEXTSTATE_REG_3" BEL
+        "LM4550_controler_1/NEXTSTATE_REG_2" BEL
+        "LM4550_controler_1/NEXTSTATE_REG_1" BEL
+        "LM4550_controler_1/NEXTSTATE_REG_0" BEL "LM4550_controler_1/count_31"
+        BEL "LM4550_controler_1/count_30" BEL "LM4550_controler_1/count_29"
+        BEL "LM4550_controler_1/count_28" BEL "LM4550_controler_1/count_27"
+        BEL "LM4550_controler_1/count_26" BEL "LM4550_controler_1/count_25"
+        BEL "LM4550_controler_1/count_24" BEL "LM4550_controler_1/count_23"
+        BEL "LM4550_controler_1/count_22" BEL "LM4550_controler_1/count_21"
+        BEL "LM4550_controler_1/count_20" BEL "LM4550_controler_1/count_19"
+        BEL "LM4550_controler_1/count_18" BEL "LM4550_controler_1/count_17"
+        BEL "LM4550_controler_1/count_16" BEL "LM4550_controler_1/count_15"
+        BEL "LM4550_controler_1/count_14" BEL "LM4550_controler_1/count_13"
+        BEL "LM4550_controler_1/count_12" BEL "LM4550_controler_1/count_11"
+        BEL "LM4550_controler_1/count_10" BEL "LM4550_controler_1/count_9" BEL
+        "LM4550_controler_1/count_8" BEL "LM4550_controler_1/count_7" BEL
+        "LM4550_controler_1/count_6" BEL "LM4550_controler_1/count_5" BEL
+        "LM4550_controler_1/count_4" BEL "LM4550_controler_1/count_3" BEL
+        "LM4550_controler_1/count_2" BEL "LM4550_controler_1/count_1" BEL
+        "LM4550_controler_1/count_0" BEL "LM4550_controler_1/DELAY_SYNC1" BEL
+        "LM4550_controler_1/SYNC" BEL "LM4550_controler_1/STATUS_REG_3" BEL
+        "LM4550_controler_1/STATUS_REG_2" BEL
+        "LM4550_controler_1/STATUS_REG_1" BEL
+        "LM4550_controler_1/STATUS_REG_0" BEL
+        "LM4550_controler_1/DATA_TO_SEND_254" BEL
+        "LM4550_controler_1/DATA_TO_SEND_251" BEL
+        "LM4550_controler_1/DATA_TO_SEND_239" BEL
+        "LM4550_controler_1/DATA_TO_SEND_237" BEL
+        "LM4550_controler_1/DATA_TO_SEND_236" BEL
+        "LM4550_controler_1/DATA_TO_SEND_235" BEL
+        "LM4550_controler_1/DATA_TO_SEND_234" BEL
+        "LM4550_controler_1/DATA_TO_SEND_233" BEL
+        "LM4550_controler_1/DATA_TO_SEND_232" BEL
+        "LM4550_controler_1/DATA_TO_SEND_219" BEL
+        "LM4550_controler_1/DATA_TO_SEND_218" BEL
+        "LM4550_controler_1/DATA_TO_SEND_217" BEL
+        "LM4550_controler_1/DATA_TO_SEND_216" BEL
+        "LM4550_controler_1/DATA_TO_SEND_215" BEL
+        "LM4550_controler_1/DATA_TO_SEND_214" BEL
+        "LM4550_controler_1/DATA_TO_SEND_213" BEL
+        "LM4550_controler_1/DATA_TO_SEND_212" BEL
+        "LM4550_controler_1/DATA_TO_SEND_211" BEL
+        "LM4550_controler_1/DATA_TO_SEND_210" BEL
+        "LM4550_controler_1/DATA_TO_SEND_209" BEL
+        "LM4550_controler_1/DATA_TO_SEND_208" BEL
+        "LM4550_controler_1/DATA_TO_SEND_207" BEL
+        "LM4550_controler_1/DATA_TO_SEND_206" BEL
+        "LM4550_controler_1/DATA_TO_SEND_205" BEL
+        "LM4550_controler_1/DATA_TO_SEND_204" BEL
+        "LM4550_controler_1/DATA_TO_SEND_179" BEL
+        "LM4550_controler_1/DATA_TO_SEND_178" BEL
+        "LM4550_controler_1/DATA_TO_SEND_177" BEL
+        "LM4550_controler_1/DATA_TO_SEND_176" BEL
+        "LM4550_controler_1/DATA_TO_SEND_175" BEL
+        "LM4550_controler_1/DATA_TO_SEND_174" BEL
+        "LM4550_controler_1/DATA_TO_SEND_173" BEL
+        "LM4550_controler_1/DATA_TO_SEND_172" BEL
+        "LM4550_controler_1/DATA_TO_SEND_171" BEL
+        "LM4550_controler_1/DATA_TO_SEND_170" BEL
+        "LM4550_controler_1/DATA_TO_SEND_169" BEL
+        "LM4550_controler_1/DATA_TO_SEND_168" BEL
+        "LM4550_controler_1/DATA_TO_SEND_167" BEL
+        "LM4550_controler_1/DATA_TO_SEND_166" BEL
+        "LM4550_controler_1/DATA_TO_SEND_165" BEL
+        "LM4550_controler_1/DATA_TO_SEND_164" BEL
+        "LM4550_controler_1/DATA_TO_SEND_163" BEL
+        "LM4550_controler_1/DATA_TO_SEND_162" BEL
+        "LM4550_controler_1/FRAME_OUT_254" BEL
+        "LM4550_controler_1/FRAME_OUT_251" BEL
+        "LM4550_controler_1/FRAME_OUT_239" BEL
+        "LM4550_controler_1/FRAME_OUT_237" BEL
+        "LM4550_controler_1/FRAME_OUT_236" BEL
+        "LM4550_controler_1/FRAME_OUT_235" BEL
+        "LM4550_controler_1/FRAME_OUT_234" BEL
+        "LM4550_controler_1/FRAME_OUT_233" BEL
+        "LM4550_controler_1/FRAME_OUT_232" BEL
+        "LM4550_controler_1/FRAME_OUT_219" BEL
+        "LM4550_controler_1/FRAME_OUT_218" BEL
+        "LM4550_controler_1/FRAME_OUT_217" BEL
+        "LM4550_controler_1/FRAME_OUT_216" BEL
+        "LM4550_controler_1/FRAME_OUT_215" BEL
+        "LM4550_controler_1/FRAME_OUT_214" BEL
+        "LM4550_controler_1/FRAME_OUT_213" BEL
+        "LM4550_controler_1/FRAME_OUT_212" BEL
+        "LM4550_controler_1/FRAME_OUT_211" BEL
+        "LM4550_controler_1/FRAME_OUT_210" BEL
+        "LM4550_controler_1/FRAME_OUT_209" BEL
+        "LM4550_controler_1/FRAME_OUT_208" BEL
+        "LM4550_controler_1/FRAME_OUT_207" BEL
+        "LM4550_controler_1/FRAME_OUT_206" BEL
+        "LM4550_controler_1/FRAME_OUT_205" BEL
+        "LM4550_controler_1/FRAME_OUT_204" BEL
+        "LM4550_controler_1/FRAME_OUT_179" BEL
+        "LM4550_controler_1/FRAME_OUT_178" BEL
+        "LM4550_controler_1/FRAME_OUT_177" BEL
+        "LM4550_controler_1/FRAME_OUT_176" BEL
+        "LM4550_controler_1/FRAME_OUT_175" BEL
+        "LM4550_controler_1/FRAME_OUT_174" BEL
+        "LM4550_controler_1/FRAME_OUT_173" BEL
+        "LM4550_controler_1/FRAME_OUT_172" BEL
+        "LM4550_controler_1/FRAME_OUT_171" BEL
+        "LM4550_controler_1/FRAME_OUT_170" BEL
+        "LM4550_controler_1/FRAME_OUT_169" BEL
+        "LM4550_controler_1/FRAME_OUT_168" BEL
+        "LM4550_controler_1/FRAME_OUT_167" BEL
+        "LM4550_controler_1/FRAME_OUT_166" BEL
+        "LM4550_controler_1/FRAME_OUT_165" BEL
+        "LM4550_controler_1/FRAME_OUT_164" BEL
+        "LM4550_controler_1/FRAME_OUT_163" BEL
+        "LM4550_controler_1/FRAME_OUT_162" BEL
+        "LM4550_controler_1/FRAME_IN_252" BEL
+        "LM4550_controler_1/FRAME_IN_251" BEL
+        "LM4550_controler_1/FRAME_IN_207" BEL
+        "LM4550_controler_1/FRAME_IN_206" BEL
+        "LM4550_controler_1/FRAME_IN_205" BEL
+        "LM4550_controler_1/FRAME_IN_204" BEL
+        "LM4550_controler_1/FRAME_IN_199" BEL
+        "LM4550_controler_1/FRAME_IN_198" BEL
+        "LM4550_controler_1/FRAME_IN_197" BEL
+        "LM4550_controler_1/FRAME_IN_196" BEL
+        "LM4550_controler_1/FRAME_IN_195" BEL
+        "LM4550_controler_1/FRAME_IN_194" BEL
+        "LM4550_controler_1/FRAME_IN_193" BEL
+        "LM4550_controler_1/FRAME_IN_192" BEL
+        "LM4550_controler_1/FRAME_IN_191" BEL
+        "LM4550_controler_1/FRAME_IN_190" BEL
+        "LM4550_controler_1/FRAME_IN_189" BEL
+        "LM4550_controler_1/FRAME_IN_188" BEL
+        "LM4550_controler_1/FRAME_IN_187" BEL
+        "LM4550_controler_1/FRAME_IN_186" BEL
+        "LM4550_controler_1/FRAME_IN_185" BEL
+        "LM4550_controler_1/FRAME_IN_184" BEL
+        "LM4550_controler_1/FRAME_IN_183" BEL
+        "LM4550_controler_1/FRAME_IN_182" BEL
+        "LM4550_controler_1/FRAME_IN_179" BEL
+        "LM4550_controler_1/FRAME_IN_178" BEL
+        "LM4550_controler_1/FRAME_IN_177" BEL
+        "LM4550_controler_1/FRAME_IN_176" BEL
+        "LM4550_controler_1/FRAME_IN_175" BEL
+        "LM4550_controler_1/FRAME_IN_174" BEL
+        "LM4550_controler_1/FRAME_IN_173" BEL
+        "LM4550_controler_1/FRAME_IN_172" BEL
+        "LM4550_controler_1/FRAME_IN_171" BEL
+        "LM4550_controler_1/FRAME_IN_170" BEL
+        "LM4550_controler_1/FRAME_IN_169" BEL
+        "LM4550_controler_1/FRAME_IN_168" BEL
+        "LM4550_controler_1/FRAME_IN_167" BEL
+        "LM4550_controler_1/FRAME_IN_166" BEL
+        "LM4550_controler_1/FRAME_IN_165" BEL
+        "LM4550_controler_1/FRAME_IN_164" BEL
+        "LM4550_controler_1/FRAME_IN_163" BEL
+        "LM4550_controler_1/FRAME_IN_162" BEL "LM4550_controler_1/STATE_1" BEL
+        "LM4550_controler_1/STATE_0" BEL "LM4550_controler_1/NEXTSTATE_1" BEL
+        "LM4550_controler_1/NEXTSTATE_0" BEL "LM4550_controler_1/READ_WRITE"
+        BEL "LM4550_controler_1/SEND_VALID_REG_5" BEL
+        "LM4550_controler_1/SEND_VALID_REG_4" BEL
+        "LM4550_controler_1/SEND_VALID_REG_3" BEL
+        "LM4550_controler_1/SEND_VALID_REG_2" BEL
+        "LM4550_controler_1/SEND_VALID_REG_1" BEL
+        "LM4550_controler_1/SEND_VALID_REG_0" BEL
+        "LM4550_controler_1/VALID_REGISTER_DATA" BEL "LM4550_controler_1/RDY"
+        BEL "LM4550_controler_1/DIN_REG_15" BEL
+        "LM4550_controler_1/DIN_REG_14" BEL "LM4550_controler_1/DIN_REG_13"
+        BEL "LM4550_controler_1/DIN_REG_12" BEL
+        "LM4550_controler_1/DIN_REG_11" BEL "LM4550_controler_1/DIN_REG_10"
+        BEL "LM4550_controler_1/DIN_REG_9" BEL "LM4550_controler_1/DIN_REG_8"
+        BEL "LM4550_controler_1/DIN_REG_7" BEL "LM4550_controler_1/DIN_REG_6"
+        BEL "LM4550_controler_1/DIN_REG_5" BEL "LM4550_controler_1/DIN_REG_4"
+        BEL "LM4550_controler_1/DIN_REG_3" BEL "LM4550_controler_1/DIN_REG_2"
+        BEL "LM4550_controler_1/DIN_REG_1" BEL "LM4550_controler_1/DIN_REG_0"
+        BEL "LM4550_controler_1/REGID_REG_5" BEL
+        "LM4550_controler_1/REGID_REG_4" BEL "LM4550_controler_1/REGID_REG_3"
+        BEL "LM4550_controler_1/REGID_REG_2" BEL
+        "LM4550_controler_1/REGID_REG_1" BEL "LM4550_controler_1/REGID_REG_0"
+        BEL "LM4550_controler_1/count_reg_31" BEL
+        "LM4550_controler_1/count_reg_30" BEL
+        "LM4550_controler_1/count_reg_29" BEL
+        "LM4550_controler_1/count_reg_28" BEL
+        "LM4550_controler_1/count_reg_27" BEL
+        "LM4550_controler_1/count_reg_26" BEL
+        "LM4550_controler_1/count_reg_25" BEL
+        "LM4550_controler_1/count_reg_24" BEL
+        "LM4550_controler_1/count_reg_23" BEL
+        "LM4550_controler_1/count_reg_22" BEL
+        "LM4550_controler_1/count_reg_21" BEL
+        "LM4550_controler_1/count_reg_20" BEL
+        "LM4550_controler_1/count_reg_19" BEL
+        "LM4550_controler_1/count_reg_18" BEL
+        "LM4550_controler_1/count_reg_17" BEL
+        "LM4550_controler_1/count_reg_16" BEL
+        "LM4550_controler_1/count_reg_15" BEL
+        "LM4550_controler_1/count_reg_14" BEL
+        "LM4550_controler_1/count_reg_13" BEL
+        "LM4550_controler_1/count_reg_12" BEL
+        "LM4550_controler_1/count_reg_11" BEL
+        "LM4550_controler_1/count_reg_10" BEL "LM4550_controler_1/count_reg_9"
+        BEL "LM4550_controler_1/count_reg_8" BEL
+        "LM4550_controler_1/count_reg_7" BEL "LM4550_controler_1/count_reg_6"
+        BEL "LM4550_controler_1/count_reg_5" BEL
+        "LM4550_controler_1/count_reg_4" BEL "LM4550_controler_1/count_reg_3"
+        BEL "LM4550_controler_1/count_reg_2" BEL
+        "LM4550_controler_1/count_reg_1" BEL "LM4550_controler_1/count_reg_0"
+        BEL "LM4550_controler_1/OUT_SHIFT_255" BEL
+        "LM4550_controler_1/OUT_SHIFT_254" BEL
+        "LM4550_controler_1/OUT_SHIFT_253" BEL
+        "LM4550_controler_1/OUT_SHIFT_252" BEL
+        "LM4550_controler_1/OUT_SHIFT_251" BEL
+        "LM4550_controler_1/OUT_SHIFT_250" BEL
+        "LM4550_controler_1/OUT_SHIFT_249" BEL
+        "LM4550_controler_1/OUT_SHIFT_248" BEL
+        "LM4550_controler_1/OUT_SHIFT_247" BEL
+        "LM4550_controler_1/OUT_SHIFT_246" BEL
+        "LM4550_controler_1/OUT_SHIFT_245" BEL
+        "LM4550_controler_1/OUT_SHIFT_244" BEL
+        "LM4550_controler_1/OUT_SHIFT_243" BEL
+        "LM4550_controler_1/OUT_SHIFT_242" BEL
+        "LM4550_controler_1/OUT_SHIFT_241" BEL
+        "LM4550_controler_1/OUT_SHIFT_240" BEL
+        "LM4550_controler_1/OUT_SHIFT_239" BEL
+        "LM4550_controler_1/OUT_SHIFT_238" BEL
+        "LM4550_controler_1/OUT_SHIFT_237" BEL
+        "LM4550_controler_1/OUT_SHIFT_236" BEL
+        "LM4550_controler_1/OUT_SHIFT_235" BEL
+        "LM4550_controler_1/OUT_SHIFT_234" BEL
+        "LM4550_controler_1/OUT_SHIFT_233" BEL
+        "LM4550_controler_1/OUT_SHIFT_232" BEL
+        "LM4550_controler_1/OUT_SHIFT_231" BEL
+        "LM4550_controler_1/OUT_SHIFT_230" BEL
+        "LM4550_controler_1/OUT_SHIFT_229" BEL
+        "LM4550_controler_1/OUT_SHIFT_228" BEL
+        "LM4550_controler_1/OUT_SHIFT_227" BEL
+        "LM4550_controler_1/OUT_SHIFT_226" BEL
+        "LM4550_controler_1/OUT_SHIFT_225" BEL
+        "LM4550_controler_1/OUT_SHIFT_224" BEL
+        "LM4550_controler_1/OUT_SHIFT_223" BEL
+        "LM4550_controler_1/OUT_SHIFT_222" BEL
+        "LM4550_controler_1/OUT_SHIFT_221" BEL
+        "LM4550_controler_1/OUT_SHIFT_220" BEL
+        "LM4550_controler_1/OUT_SHIFT_219" BEL
+        "LM4550_controler_1/OUT_SHIFT_218" BEL
+        "LM4550_controler_1/OUT_SHIFT_217" BEL
+        "LM4550_controler_1/OUT_SHIFT_216" BEL
+        "LM4550_controler_1/OUT_SHIFT_215" BEL
+        "LM4550_controler_1/OUT_SHIFT_214" BEL
+        "LM4550_controler_1/OUT_SHIFT_213" BEL
+        "LM4550_controler_1/OUT_SHIFT_212" BEL
+        "LM4550_controler_1/OUT_SHIFT_211" BEL
+        "LM4550_controler_1/OUT_SHIFT_210" BEL
+        "LM4550_controler_1/OUT_SHIFT_209" BEL
+        "LM4550_controler_1/OUT_SHIFT_208" BEL
+        "LM4550_controler_1/OUT_SHIFT_207" BEL
+        "LM4550_controler_1/OUT_SHIFT_206" BEL
+        "LM4550_controler_1/OUT_SHIFT_205" BEL
+        "LM4550_controler_1/OUT_SHIFT_204" BEL
+        "LM4550_controler_1/OUT_SHIFT_203" BEL
+        "LM4550_controler_1/OUT_SHIFT_202" BEL
+        "LM4550_controler_1/OUT_SHIFT_201" BEL
+        "LM4550_controler_1/OUT_SHIFT_200" BEL
+        "LM4550_controler_1/OUT_SHIFT_199" BEL
+        "LM4550_controler_1/OUT_SHIFT_198" BEL
+        "LM4550_controler_1/OUT_SHIFT_197" BEL
+        "LM4550_controler_1/OUT_SHIFT_196" BEL
+        "LM4550_controler_1/OUT_SHIFT_195" BEL
+        "LM4550_controler_1/OUT_SHIFT_194" BEL
+        "LM4550_controler_1/OUT_SHIFT_193" BEL
+        "LM4550_controler_1/OUT_SHIFT_192" BEL
+        "LM4550_controler_1/OUT_SHIFT_191" BEL
+        "LM4550_controler_1/OUT_SHIFT_190" BEL
+        "LM4550_controler_1/OUT_SHIFT_189" BEL
+        "LM4550_controler_1/OUT_SHIFT_188" BEL
+        "LM4550_controler_1/OUT_SHIFT_187" BEL
+        "LM4550_controler_1/OUT_SHIFT_186" BEL
+        "LM4550_controler_1/OUT_SHIFT_185" BEL
+        "LM4550_controler_1/OUT_SHIFT_184" BEL
+        "LM4550_controler_1/OUT_SHIFT_183" BEL
+        "LM4550_controler_1/OUT_SHIFT_182" BEL
+        "LM4550_controler_1/OUT_SHIFT_181" BEL
+        "LM4550_controler_1/OUT_SHIFT_180" BEL
+        "LM4550_controler_1/OUT_SHIFT_179" BEL
+        "LM4550_controler_1/OUT_SHIFT_178" BEL
+        "LM4550_controler_1/OUT_SHIFT_177" BEL
+        "LM4550_controler_1/OUT_SHIFT_176" BEL
+        "LM4550_controler_1/OUT_SHIFT_175" BEL
+        "LM4550_controler_1/OUT_SHIFT_174" BEL
+        "LM4550_controler_1/OUT_SHIFT_173" BEL
+        "LM4550_controler_1/OUT_SHIFT_172" BEL
+        "LM4550_controler_1/OUT_SHIFT_171" BEL
+        "LM4550_controler_1/OUT_SHIFT_170" BEL
+        "LM4550_controler_1/OUT_SHIFT_169" BEL
+        "LM4550_controler_1/OUT_SHIFT_168" BEL
+        "LM4550_controler_1/OUT_SHIFT_167" BEL
+        "LM4550_controler_1/OUT_SHIFT_166" BEL
+        "LM4550_controler_1/OUT_SHIFT_165" BEL
+        "LM4550_controler_1/OUT_SHIFT_164" BEL
+        "LM4550_controler_1/OUT_SHIFT_163" BEL
+        "LM4550_controler_1/OUT_SHIFT_162" BEL "ioports16_1/state_FSM_FFd1"
+        BEL "ioports16_1/state_FSM_FFd2" BEL "ioports16_1/state_FSM_FFd4" BEL
+        "ioports16_1/state_FSM_FFd5" BEL "ioports16_1/state_FSM_FFd3" BEL
+        "ioports16_1/state_FSM_FFd7" BEL "ioports16_1/state_FSM_FFd8" BEL
+        "ioports16_1/state_FSM_FFd6" BEL "ioports16_1/state_FSM_FFd10" BEL
+        "ioports16_1/state_FSM_FFd11" BEL "ioports16_1/state_FSM_FFd9" BEL
+        "ioports16_1/state_FSM_FFd12" BEL "ioports16_1/state_FSM_FFd13" BEL
+        "ioports16_1/state_FSM_FFd15" BEL "ioports16_1/state_FSM_FFd14" BEL
+        "ioports16_1/dataout_7" BEL "ioports16_1/dataout_6" BEL
+        "ioports16_1/dataout_5" BEL "ioports16_1/dataout_4" BEL
+        "ioports16_1/dataout_3" BEL "ioports16_1/dataout_2" BEL
+        "ioports16_1/dataout_1" BEL "ioports16_1/dataout_0" BEL
+        "ioports16_1/outf_1" BEL "ioports16_1/outf_0" BEL "ioports16_1/out3_5"
+        BEL "ioports16_1/out3_4" BEL "ioports16_1/out3_3" BEL
+        "ioports16_1/out3_2" BEL "ioports16_1/out3_1" BEL "ioports16_1/out3_0"
+        BEL "ioports16_1/out2_15" BEL "ioports16_1/out2_14" BEL
+        "ioports16_1/out2_13" BEL "ioports16_1/out2_12" BEL
+        "ioports16_1/out2_11" BEL "ioports16_1/out2_10" BEL
+        "ioports16_1/out2_9" BEL "ioports16_1/out2_8" BEL "ioports16_1/out2_7"
+        BEL "ioports16_1/out2_6" BEL "ioports16_1/out2_5" BEL
+        "ioports16_1/out2_4" BEL "ioports16_1/out2_3" BEL "ioports16_1/out2_2"
+        BEL "ioports16_1/out2_1" BEL "ioports16_1/out2_0" BEL
+        "ioports16_1/datatoout_20" BEL "ioports16_1/datatoout_19" BEL
+        "ioports16_1/datatoout_18" BEL "ioports16_1/datatoout_17" BEL
+        "ioports16_1/datatoout_16" BEL "ioports16_1/datatoout_8" BEL
+        "ioports16_1/datatoout_7" BEL "ioports16_1/datatoout_6" BEL
+        "ioports16_1/datatoout_5" BEL "ioports16_1/datatoout_4" BEL
+        "ioports16_1/datatoout_3" BEL "ioports16_1/datatoout_2" BEL
+        "ioports16_1/datatoout_1" BEL "ioports16_1/datatoout_0" BEL
+        "ioports16_1/address_3" BEL "ioports16_1/address_2" BEL
+        "ioports16_1/address_1" BEL "ioports16_1/address_0" BEL
+        "ioports16_1/enout" BEL "ioports16_1/byte1_7" BEL
+        "ioports16_1/byte1_6" BEL "ioports16_1/byte1_5" BEL
+        "ioports16_1/byte1_4" BEL "ioports16_1/byte1_3" BEL
+        "ioports16_1/byte1_2" BEL "ioports16_1/byte1_1" BEL
+        "ioports16_1/byte1_0" BEL "uart_1/baudtxcount_2" BEL
+        "uart_1/baudtxcount_1" BEL "uart_1/baudrxcount_1" BEL
+        "uart_1/baudrxcount_2" BEL "uart_1/tx" BEL "uart_1/starttxbit" BEL
+        "uart_1/staterxbc" BEL "uart_1/statetxbc" BEL
+        "LM4550_controler_1/DIN_RDY" BEL "uart_1/rxready" BEL "uart_1/statetx"
+        BEL "uart_1/staterx" BEL "LM4550_controler_1/IN_SHIFT_251" BEL
+        "LM4550_controler_1/IN_SHIFT_250" BEL
+        "LM4550_controler_1/IN_SHIFT_249" BEL
+        "LM4550_controler_1/IN_SHIFT_248" BEL
+        "LM4550_controler_1/IN_SHIFT_247" BEL
+        "LM4550_controler_1/IN_SHIFT_246" BEL
+        "LM4550_controler_1/IN_SHIFT_245" BEL
+        "LM4550_controler_1/IN_SHIFT_244" BEL
+        "LM4550_controler_1/IN_SHIFT_243" BEL
+        "LM4550_controler_1/IN_SHIFT_242" BEL
+        "LM4550_controler_1/IN_SHIFT_241" BEL
+        "LM4550_controler_1/IN_SHIFT_240" BEL
+        "LM4550_controler_1/IN_SHIFT_239" BEL
+        "LM4550_controler_1/IN_SHIFT_238" BEL
+        "LM4550_controler_1/IN_SHIFT_237" BEL
+        "LM4550_controler_1/IN_SHIFT_236" BEL
+        "LM4550_controler_1/IN_SHIFT_235" BEL
+        "LM4550_controler_1/IN_SHIFT_234" BEL
+        "LM4550_controler_1/IN_SHIFT_233" BEL
+        "LM4550_controler_1/IN_SHIFT_232" BEL
+        "LM4550_controler_1/IN_SHIFT_231" BEL
+        "LM4550_controler_1/IN_SHIFT_230" BEL
+        "LM4550_controler_1/IN_SHIFT_229" BEL
+        "LM4550_controler_1/IN_SHIFT_228" BEL
+        "LM4550_controler_1/IN_SHIFT_227" BEL
+        "LM4550_controler_1/IN_SHIFT_226" BEL
+        "LM4550_controler_1/IN_SHIFT_225" BEL
+        "LM4550_controler_1/IN_SHIFT_224" BEL
+        "LM4550_controler_1/IN_SHIFT_223" BEL
+        "LM4550_controler_1/IN_SHIFT_222" BEL
+        "LM4550_controler_1/IN_SHIFT_221" BEL
+        "LM4550_controler_1/IN_SHIFT_220" BEL
+        "LM4550_controler_1/IN_SHIFT_219" BEL
+        "LM4550_controler_1/IN_SHIFT_218" BEL
+        "LM4550_controler_1/IN_SHIFT_217" BEL
+        "LM4550_controler_1/IN_SHIFT_216" BEL
+        "LM4550_controler_1/IN_SHIFT_215" BEL
+        "LM4550_controler_1/IN_SHIFT_214" BEL
+        "LM4550_controler_1/IN_SHIFT_213" BEL
+        "LM4550_controler_1/IN_SHIFT_212" BEL
+        "LM4550_controler_1/IN_SHIFT_211" BEL
+        "LM4550_controler_1/IN_SHIFT_210" BEL
+        "LM4550_controler_1/IN_SHIFT_209" BEL
+        "LM4550_controler_1/IN_SHIFT_208" BEL
+        "LM4550_controler_1/IN_SHIFT_207" BEL
+        "LM4550_controler_1/IN_SHIFT_206" BEL
+        "LM4550_controler_1/IN_SHIFT_205" BEL
+        "LM4550_controler_1/IN_SHIFT_204" BEL
+        "LM4550_controler_1/IN_SHIFT_203" BEL
+        "LM4550_controler_1/IN_SHIFT_202" BEL
+        "LM4550_controler_1/IN_SHIFT_201" BEL
+        "LM4550_controler_1/IN_SHIFT_200" BEL
+        "LM4550_controler_1/IN_SHIFT_199" BEL
+        "LM4550_controler_1/IN_SHIFT_198" BEL
+        "LM4550_controler_1/IN_SHIFT_197" BEL
+        "LM4550_controler_1/IN_SHIFT_196" BEL
+        "LM4550_controler_1/IN_SHIFT_195" BEL
+        "LM4550_controler_1/IN_SHIFT_194" BEL
+        "LM4550_controler_1/IN_SHIFT_193" BEL
+        "LM4550_controler_1/IN_SHIFT_192" BEL
+        "LM4550_controler_1/IN_SHIFT_191" BEL
+        "LM4550_controler_1/IN_SHIFT_190" BEL
+        "LM4550_controler_1/IN_SHIFT_189" BEL
+        "LM4550_controler_1/IN_SHIFT_188" BEL
+        "LM4550_controler_1/IN_SHIFT_187" BEL
+        "LM4550_controler_1/IN_SHIFT_186" BEL
+        "LM4550_controler_1/IN_SHIFT_185" BEL
+        "LM4550_controler_1/IN_SHIFT_184" BEL
+        "LM4550_controler_1/IN_SHIFT_183" BEL
+        "LM4550_controler_1/IN_SHIFT_182" BEL
+        "LM4550_controler_1/IN_SHIFT_181" BEL
+        "LM4550_controler_1/IN_SHIFT_180" BEL
+        "LM4550_controler_1/IN_SHIFT_179" BEL
+        "LM4550_controler_1/IN_SHIFT_178" BEL
+        "LM4550_controler_1/IN_SHIFT_177" BEL
+        "LM4550_controler_1/IN_SHIFT_176" BEL
+        "LM4550_controler_1/IN_SHIFT_175" BEL
+        "LM4550_controler_1/IN_SHIFT_174" BEL
+        "LM4550_controler_1/IN_SHIFT_173" BEL
+        "LM4550_controler_1/IN_SHIFT_172" BEL
+        "LM4550_controler_1/IN_SHIFT_171" BEL
+        "LM4550_controler_1/IN_SHIFT_170" BEL
+        "LM4550_controler_1/IN_SHIFT_169" BEL
+        "LM4550_controler_1/IN_SHIFT_168" BEL
+        "LM4550_controler_1/IN_SHIFT_167" BEL
+        "LM4550_controler_1/IN_SHIFT_166" BEL
+        "LM4550_controler_1/IN_SHIFT_165" BEL
+        "LM4550_controler_1/IN_SHIFT_164" BEL
+        "LM4550_controler_1/IN_SHIFT_163" BEL
+        "LM4550_controler_1/IN_SHIFT_162" BEL
+        "LM4550_controler_1/IN_SHIFT_161" BEL
+        "LM4550_controler_1/IN_SHIFT_160" BEL
+        "LM4550_controler_1/IN_SHIFT_159" BEL
+        "LM4550_controler_1/IN_SHIFT_158" BEL
+        "LM4550_controler_1/IN_SHIFT_157" BEL
+        "LM4550_controler_1/IN_SHIFT_156" BEL
+        "LM4550_controler_1/IN_SHIFT_155" BEL
+        "LM4550_controler_1/IN_SHIFT_154" BEL
+        "LM4550_controler_1/IN_SHIFT_153" BEL
+        "LM4550_controler_1/IN_SHIFT_152" BEL
+        "LM4550_controler_1/IN_SHIFT_151" BEL
+        "LM4550_controler_1/IN_SHIFT_150" BEL
+        "LM4550_controler_1/IN_SHIFT_149" BEL
+        "LM4550_controler_1/IN_SHIFT_148" BEL
+        "LM4550_controler_1/IN_SHIFT_147" BEL
+        "LM4550_controler_1/IN_SHIFT_146" BEL
+        "LM4550_controler_1/IN_SHIFT_145" BEL
+        "LM4550_controler_1/IN_SHIFT_144" BEL
+        "LM4550_controler_1/IN_SHIFT_143" BEL
+        "LM4550_controler_1/IN_SHIFT_142" BEL
+        "LM4550_controler_1/IN_SHIFT_141" BEL
+        "LM4550_controler_1/IN_SHIFT_140" BEL
+        "LM4550_controler_1/IN_SHIFT_139" BEL
+        "LM4550_controler_1/IN_SHIFT_138" BEL
+        "LM4550_controler_1/IN_SHIFT_137" BEL
+        "LM4550_controler_1/IN_SHIFT_136" BEL
+        "LM4550_controler_1/IN_SHIFT_135" BEL
+        "LM4550_controler_1/IN_SHIFT_134" BEL
+        "LM4550_controler_1/IN_SHIFT_133" BEL
+        "LM4550_controler_1/IN_SHIFT_132" BEL
+        "LM4550_controler_1/IN_SHIFT_131" BEL
+        "LM4550_controler_1/IN_SHIFT_130" BEL
+        "LM4550_controler_1/IN_SHIFT_129" BEL
+        "LM4550_controler_1/IN_SHIFT_128" BEL
+        "LM4550_controler_1/IN_SHIFT_127" BEL
+        "LM4550_controler_1/IN_SHIFT_126" BEL
+        "LM4550_controler_1/IN_SHIFT_125" BEL
+        "LM4550_controler_1/IN_SHIFT_124" BEL
+        "LM4550_controler_1/IN_SHIFT_123" BEL
+        "LM4550_controler_1/IN_SHIFT_122" BEL
+        "LM4550_controler_1/IN_SHIFT_121" BEL
+        "LM4550_controler_1/IN_SHIFT_120" BEL
+        "LM4550_controler_1/IN_SHIFT_119" BEL
+        "LM4550_controler_1/IN_SHIFT_118" BEL
+        "LM4550_controler_1/IN_SHIFT_117" BEL
+        "LM4550_controler_1/IN_SHIFT_116" BEL
+        "LM4550_controler_1/IN_SHIFT_115" BEL
+        "LM4550_controler_1/IN_SHIFT_114" BEL
+        "LM4550_controler_1/IN_SHIFT_113" BEL
+        "LM4550_controler_1/IN_SHIFT_112" BEL
+        "LM4550_controler_1/IN_SHIFT_111" BEL
+        "LM4550_controler_1/IN_SHIFT_110" BEL
+        "LM4550_controler_1/IN_SHIFT_109" BEL
+        "LM4550_controler_1/IN_SHIFT_108" BEL
+        "LM4550_controler_1/IN_SHIFT_107" BEL
+        "LM4550_controler_1/IN_SHIFT_106" BEL
+        "LM4550_controler_1/IN_SHIFT_105" BEL
+        "LM4550_controler_1/IN_SHIFT_104" BEL
+        "LM4550_controler_1/IN_SHIFT_103" BEL
+        "LM4550_controler_1/IN_SHIFT_102" BEL
+        "LM4550_controler_1/IN_SHIFT_101" BEL
+        "LM4550_controler_1/IN_SHIFT_100" BEL "LM4550_controler_1/IN_SHIFT_99"
+        BEL "LM4550_controler_1/IN_SHIFT_98" BEL
+        "LM4550_controler_1/IN_SHIFT_97" BEL "LM4550_controler_1/IN_SHIFT_96"
+        BEL "LM4550_controler_1/IN_SHIFT_95" BEL
+        "LM4550_controler_1/IN_SHIFT_94" BEL "LM4550_controler_1/IN_SHIFT_93"
+        BEL "LM4550_controler_1/IN_SHIFT_92" BEL
+        "LM4550_controler_1/IN_SHIFT_91" BEL "LM4550_controler_1/IN_SHIFT_90"
+        BEL "LM4550_controler_1/IN_SHIFT_89" BEL
+        "LM4550_controler_1/IN_SHIFT_88" BEL "LM4550_controler_1/IN_SHIFT_87"
+        BEL "LM4550_controler_1/IN_SHIFT_86" BEL
+        "LM4550_controler_1/IN_SHIFT_85" BEL "LM4550_controler_1/IN_SHIFT_84"
+        BEL "LM4550_controler_1/IN_SHIFT_83" BEL
+        "LM4550_controler_1/IN_SHIFT_82" BEL "LM4550_controler_1/IN_SHIFT_81"
+        BEL "LM4550_controler_1/IN_SHIFT_80" BEL
+        "LM4550_controler_1/IN_SHIFT_79" BEL "LM4550_controler_1/IN_SHIFT_78"
+        BEL "LM4550_controler_1/IN_SHIFT_77" BEL
+        "LM4550_controler_1/IN_SHIFT_76" BEL "LM4550_controler_1/IN_SHIFT_75"
+        BEL "LM4550_controler_1/IN_SHIFT_74" BEL
+        "LM4550_controler_1/IN_SHIFT_73" BEL "LM4550_controler_1/IN_SHIFT_72"
+        BEL "LM4550_controler_1/IN_SHIFT_71" BEL
+        "LM4550_controler_1/IN_SHIFT_70" BEL "LM4550_controler_1/IN_SHIFT_69"
+        BEL "LM4550_controler_1/IN_SHIFT_68" BEL
+        "LM4550_controler_1/IN_SHIFT_67" BEL "LM4550_controler_1/IN_SHIFT_66"
+        BEL "LM4550_controler_1/IN_SHIFT_65" BEL
+        "LM4550_controler_1/IN_SHIFT_64" BEL "LM4550_controler_1/IN_SHIFT_63"
+        BEL "LM4550_controler_1/IN_SHIFT_62" BEL
+        "LM4550_controler_1/IN_SHIFT_61" BEL "LM4550_controler_1/IN_SHIFT_60"
+        BEL "LM4550_controler_1/IN_SHIFT_59" BEL
+        "LM4550_controler_1/IN_SHIFT_58" BEL "LM4550_controler_1/IN_SHIFT_57"
+        BEL "LM4550_controler_1/IN_SHIFT_56" BEL
+        "LM4550_controler_1/IN_SHIFT_55" BEL "LM4550_controler_1/IN_SHIFT_54"
+        BEL "LM4550_controler_1/IN_SHIFT_53" BEL
+        "LM4550_controler_1/IN_SHIFT_52" BEL "LM4550_controler_1/IN_SHIFT_51"
+        BEL "LM4550_controler_1/IN_SHIFT_50" BEL
+        "LM4550_controler_1/IN_SHIFT_49" BEL "LM4550_controler_1/IN_SHIFT_48"
+        BEL "LM4550_controler_1/IN_SHIFT_47" BEL
+        "LM4550_controler_1/IN_SHIFT_46" BEL "LM4550_controler_1/IN_SHIFT_45"
+        BEL "LM4550_controler_1/IN_SHIFT_44" BEL
+        "LM4550_controler_1/IN_SHIFT_43" BEL "LM4550_controler_1/IN_SHIFT_42"
+        BEL "LM4550_controler_1/IN_SHIFT_41" BEL
+        "LM4550_controler_1/IN_SHIFT_40" BEL "LM4550_controler_1/IN_SHIFT_39"
+        BEL "LM4550_controler_1/IN_SHIFT_38" BEL
+        "LM4550_controler_1/IN_SHIFT_37" BEL "LM4550_controler_1/IN_SHIFT_36"
+        BEL "LM4550_controler_1/IN_SHIFT_35" BEL
+        "LM4550_controler_1/IN_SHIFT_34" BEL "LM4550_controler_1/IN_SHIFT_33"
+        BEL "LM4550_controler_1/IN_SHIFT_32" BEL
+        "LM4550_controler_1/IN_SHIFT_31" BEL "LM4550_controler_1/IN_SHIFT_30"
+        BEL "LM4550_controler_1/IN_SHIFT_29" BEL
+        "LM4550_controler_1/IN_SHIFT_28" BEL "LM4550_controler_1/IN_SHIFT_27"
+        BEL "LM4550_controler_1/IN_SHIFT_26" BEL
+        "LM4550_controler_1/IN_SHIFT_25" BEL "LM4550_controler_1/IN_SHIFT_24"
+        BEL "LM4550_controler_1/IN_SHIFT_23" BEL
+        "LM4550_controler_1/IN_SHIFT_22" BEL "LM4550_controler_1/IN_SHIFT_21"
+        BEL "LM4550_controler_1/IN_SHIFT_20" BEL
+        "LM4550_controler_1/IN_SHIFT_19" BEL "LM4550_controler_1/IN_SHIFT_18"
+        BEL "LM4550_controler_1/IN_SHIFT_17" BEL
+        "LM4550_controler_1/IN_SHIFT_16" BEL "LM4550_controler_1/IN_SHIFT_15"
+        BEL "LM4550_controler_1/IN_SHIFT_14" BEL
+        "LM4550_controler_1/IN_SHIFT_13" BEL "LM4550_controler_1/IN_SHIFT_12"
+        BEL "LM4550_controler_1/IN_SHIFT_11" BEL
+        "LM4550_controler_1/IN_SHIFT_10" BEL "LM4550_controler_1/IN_SHIFT_9"
+        BEL "LM4550_controler_1/IN_SHIFT_8" BEL
+        "LM4550_controler_1/IN_SHIFT_7" BEL "LM4550_controler_1/IN_SHIFT_6"
+        BEL "LM4550_controler_1/IN_SHIFT_5" BEL
+        "LM4550_controler_1/IN_SHIFT_4" BEL "LM4550_controler_1/IN_SHIFT_3"
+        BEL "LM4550_controler_1/IN_SHIFT_2" BEL
+        "LM4550_controler_1/IN_SHIFT_1" BEL "LM4550_controler_1/IN_SHIFT_0"
+        BEL "LM4550_controler_1/DATA_RECEIVED_252" BEL
+        "LM4550_controler_1/DATA_RECEIVED_251" BEL
+        "LM4550_controler_1/DATA_RECEIVED_207" BEL
+        "LM4550_controler_1/DATA_RECEIVED_206" BEL
+        "LM4550_controler_1/DATA_RECEIVED_205" BEL
+        "LM4550_controler_1/DATA_RECEIVED_204" BEL
+        "LM4550_controler_1/DATA_RECEIVED_199" BEL
+        "LM4550_controler_1/DATA_RECEIVED_198" BEL
+        "LM4550_controler_1/DATA_RECEIVED_197" BEL
+        "LM4550_controler_1/DATA_RECEIVED_196" BEL
+        "LM4550_controler_1/DATA_RECEIVED_195" BEL
+        "LM4550_controler_1/DATA_RECEIVED_194" BEL
+        "LM4550_controler_1/DATA_RECEIVED_193" BEL
+        "LM4550_controler_1/DATA_RECEIVED_192" BEL
+        "LM4550_controler_1/DATA_RECEIVED_191" BEL
+        "LM4550_controler_1/DATA_RECEIVED_190" BEL
+        "LM4550_controler_1/DATA_RECEIVED_189" BEL
+        "LM4550_controler_1/DATA_RECEIVED_188" BEL
+        "LM4550_controler_1/DATA_RECEIVED_187" BEL
+        "LM4550_controler_1/DATA_RECEIVED_186" BEL
+        "LM4550_controler_1/DATA_RECEIVED_185" BEL
+        "LM4550_controler_1/DATA_RECEIVED_184" BEL
+        "LM4550_controler_1/DATA_RECEIVED_183" BEL
+        "LM4550_controler_1/DATA_RECEIVED_182" BEL
+        "LM4550_controler_1/DATA_RECEIVED_179" BEL
+        "LM4550_controler_1/DATA_RECEIVED_178" BEL
+        "LM4550_controler_1/DATA_RECEIVED_177" BEL
+        "LM4550_controler_1/DATA_RECEIVED_176" BEL
+        "LM4550_controler_1/DATA_RECEIVED_175" BEL
+        "LM4550_controler_1/DATA_RECEIVED_174" BEL
+        "LM4550_controler_1/DATA_RECEIVED_173" BEL
+        "LM4550_controler_1/DATA_RECEIVED_172" BEL
+        "LM4550_controler_1/DATA_RECEIVED_171" BEL
+        "LM4550_controler_1/DATA_RECEIVED_170" BEL
+        "LM4550_controler_1/DATA_RECEIVED_169" BEL
+        "LM4550_controler_1/DATA_RECEIVED_168" BEL
+        "LM4550_controler_1/DATA_RECEIVED_167" BEL
+        "LM4550_controler_1/DATA_RECEIVED_166" BEL
+        "LM4550_controler_1/DATA_RECEIVED_165" BEL
+        "LM4550_controler_1/DATA_RECEIVED_164" BEL
+        "LM4550_controler_1/DATA_RECEIVED_163" BEL
+        "LM4550_controler_1/DATA_RECEIVED_162" BEL "BIT_CLK_BUFGP/BUFG" BEL
+        "Mshreg_reset" BEL "reset" BEL
+        "LM4550_controler_1/Mshreg_SYNC_REGISTER" BEL
+        "LM4550_controler_1/SYNC_REGISTER1" BEL "reset_shift1" BEL
+        "reset_shift2" BEL "reset_shift3" BEL
+        "LM4550_controler_1/SYNC_REGISTER";
+TS_clock_freq = PERIOD TIMEGRP "clock_freq" 5 ns HIGH 50%;
+SCHEMATIC END;
+

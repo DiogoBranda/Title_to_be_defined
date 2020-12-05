@@ -1,0 +1,66 @@
+#:C19    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.68d
+#Current Working Directory:
+#:D   C:\usr\jca\FEUP\FEUP\Aulas\2020-2021\Projeto_Sistemas_Digitais_2021\Labs\Lab23\lab3\impl
+#Date/Time:
+#:T   Wed Nov 11 16:45:32 2020
+#------------------------------
+	#Reading s6base_top.ncd...
+	#Loading device for application Rf_Device from file '6slx45.nph' in environment C:\Xilinx\14.6\ISE_DS\ISE\.
+	#   "s6base_top" is an NCD, version 3.2, device xc6slx45, package csg324, speed -3
+	#Design creation date: 2020.11.11.16.38.19
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+setattr main disable_draw on
+	#3
+setattr layer routes view on
+	#4
+setattr main disable_draw off
+	#Hint: change the visibility of more than one layer at a time by clicking on the apply button, clicking two or more layer buttons, and then clicking on the apply button again.
+	#5
+unselect -all
+	#6
+select comp 'uart_1/starttxbit'
+	#comp "uart_1/starttxbit",  site "SLICE_X37Y89",  type = SLICEX  (RPM grid X103Y356)
+	#7
+unselect -all
+	#8
+select comp 'uart_1/starttxbit'
+	#comp "uart_1/starttxbit",  site "SLICE_X37Y89",  type = SLICEX  (RPM grid X103Y356)
+	#9
+unselect -all
+	#10
+select comp 'uart_1/starttxbit'
+	#comp "uart_1/starttxbit",  site "SLICE_X37Y89",  type = SLICEX  (RPM grid X103Y356)
+	#11
+post block
+	#<D5LUT>.
+	#<D5LUT>.
+	#12
+unselect -all
+	#13
+select comp 'uart_1/baudtxcount<2>'
+	#comp "uart_1/baudtxcount<2>",  site "SLICE_X36Y89",  type = SLICEX  (RPM grid X101Y356)
+	#14
+unselect -all
+	#15
+select comp 'reset'
+	#comp "reset",  site "SLICE_X52Y92",  type = SLICEM  (RPM grid X141Y368)
+	#16
+unselect -all
+	#17
+select site 'SLICE_X52Y93'
+	#site "SLICE_X52Y93",  type = SLICEM  (RPM grid X141Y372)
+	#18
+select comp 'reset'
+	#comp "reset",  site "SLICE_X52Y92",  type = SLICEM  (RPM grid X141Y368)
+	#19
+swap
+	#Completed route status: 0 of 5 nets are fully routed.
+	#20
+route

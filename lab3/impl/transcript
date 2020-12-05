@@ -1,0 +1,248 @@
+# Reading C:/caetools/MentorGraphics/tcl/vsim/pref.tcl
+# //  Questa Sim-64
+# //  Version 10.6a win64 Mar 16 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do {s6base_tb.ndo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+# Start time: 21:53:43 on Nov 14,2020
+# vlog -reportprogress 300 ../src/verilog-tb/uart_sim.v 
+# -- Compiling module uart_sim
+# 
+# Top level modules:
+# 	uart_sim
+# End time: 21:53:44 on Nov 14,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+# Start time: 21:53:44 on Nov 14,2020
+# vlog -reportprogress 300 ../src/verilog-tb/LM4550_digital_sim.v 
+# -- Compiling module LM4550_digital_sim
+# 
+# Top level modules:
+# 	LM4550_digital_sim
+# End time: 21:53:44 on Nov 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+# Start time: 21:53:44 on Nov 14,2020
+# vlog -reportprogress 300 netgen/translate/s6base_top_translate.v 
+# -- Compiling module s6base_top
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	s6base_top
+# 	glbl
+# End time: 21:53:44 on Nov 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+# Start time: 21:53:44 on Nov 14,2020
+# vlog -reportprogress 300 ../src/verilog-tb/s6base_tb.v 
+# -- Compiling module s6base_tb
+# 
+# Top level modules:
+# 	s6base_tb
+# End time: 21:53:44 on Nov 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+# Start time: 21:53:44 on Nov 14,2020
+# vlog -reportprogress 300 C:/Xilinx/14.6/ISE_DS/ISE/verilog/src/glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 21:53:45 on Nov 14,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -L simprims_ver -L secureip -lib work work.s6base_tb glbl 
+# Start time: 21:53:45 on Nov 14,2020
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.s6base_tb(fast)
+# Loading work.s6base_top(fast)
+# Loading simprims_ver.X_ONE(fast)
+# Loading simprims_ver.X_ZERO(fast)
+# Loading simprims_ver.X_MUX2(fast)
+# Loading simprims_ver.X_XOR2(fast)
+# Loading simprims_ver.X_SFF(fast)
+# Loading simprims_ver.X_FF(fast)
+# Loading simprims_ver.X_SFF(fast__1)
+# Loading simprims_ver.X_LUT2(fast)
+# Loading simprims_ver.X_LUT2(fast__1)
+# Loading simprims_ver.X_LUT3(fast)
+# Loading simprims_ver.X_LUT2(fast__2)
+# Loading simprims_ver.X_LUT4(fast)
+# Loading simprims_ver.X_LUT4(fast__1)
+# Loading simprims_ver.X_LUT5(fast)
+# Loading simprims_ver.X_LUT4(fast__2)
+# Loading simprims_ver.X_LUT5(fast__1)
+# Loading simprims_ver.X_LUT6(fast)
+# Loading simprims_ver.X_LUT3(fast__1)
+# Loading simprims_ver.X_LUT4(fast__3)
+# Loading simprims_ver.X_LUT3(fast__2)
+# Loading simprims_ver.X_LUT2(fast__3)
+# Loading simprims_ver.X_LUT6(fast__1)
+# Loading simprims_ver.X_LUT6(fast__2)
+# Loading simprims_ver.X_LUT5(fast__2)
+# Loading simprims_ver.X_LUT5(fast__3)
+# Loading simprims_ver.X_LUT4(fast__4)
+# Loading simprims_ver.X_LUT4(fast__5)
+# Loading simprims_ver.X_LUT4(fast__6)
+# Loading simprims_ver.X_LUT5(fast__4)
+# Loading simprims_ver.X_LUT2(fast__4)
+# Loading simprims_ver.X_LUT5(fast__5)
+# Loading simprims_ver.X_LUT4(fast__7)
+# Loading simprims_ver.X_LUT6(fast__3)
+# Loading simprims_ver.X_LUT4(fast__8)
+# Loading simprims_ver.X_LUT5(fast__6)
+# Loading simprims_ver.X_LUT6(fast__4)
+# Loading simprims_ver.X_LUT2(fast__5)
+# Loading simprims_ver.X_LUT5(fast__7)
+# Loading simprims_ver.X_LUT4(fast__9)
+# Loading simprims_ver.X_LUT3(fast__3)
+# Loading simprims_ver.X_LUT5(fast__8)
+# Loading simprims_ver.X_LUT6(fast__5)
+# Loading simprims_ver.X_LUT5(fast__9)
+# Loading simprims_ver.X_LUT5(fast__10)
+# Loading simprims_ver.X_LUT6(fast__6)
+# Loading simprims_ver.X_LUT5(fast__11)
+# Loading simprims_ver.X_LUT6(fast__7)
+# Loading simprims_ver.X_LUT3(fast__4)
+# Loading simprims_ver.X_LUT6(fast__8)
+# Loading simprims_ver.X_LUT6(fast__9)
+# Loading simprims_ver.X_LUT4(fast__10)
+# Loading simprims_ver.X_LUT6(fast__10)
+# Loading simprims_ver.X_LUT6(fast__11)
+# Loading simprims_ver.X_LUT6(fast__12)
+# Loading simprims_ver.X_LUT5(fast__12)
+# Loading simprims_ver.X_LUT3(fast__5)
+# Loading simprims_ver.X_LUT6(fast__13)
+# Loading simprims_ver.X_LUT6(fast__14)
+# Loading simprims_ver.X_LUT5(fast__13)
+# Loading simprims_ver.X_LUT6(fast__15)
+# Loading simprims_ver.X_LUT4(fast__11)
+# Loading simprims_ver.X_LUT6(fast__16)
+# Loading simprims_ver.X_LUT5(fast__14)
+# Loading simprims_ver.X_LUT6(fast__17)
+# Loading simprims_ver.X_BUF(fast)
+# Loading simprims_ver.X_FF(fast__1)
+# Loading simprims_ver.X_LUT2(fast__6)
+# Loading simprims_ver.X_LUT4(fast__12)
+# Loading simprims_ver.X_LUT4(fast__13)
+# Loading simprims_ver.X_LUT4(fast__14)
+# Loading simprims_ver.X_LUT2(fast__7)
+# Loading simprims_ver.X_LUT6(fast__18)
+# Loading simprims_ver.X_LUT6(fast__19)
+# Loading simprims_ver.X_LUT6(fast__20)
+# Loading simprims_ver.X_LUT6(fast__21)
+# Loading simprims_ver.X_LUT6(fast__22)
+# Loading simprims_ver.X_LUT6(fast__23)
+# Loading simprims_ver.X_LUT6(fast__24)
+# Loading simprims_ver.X_LUT6(fast__25)
+# Loading simprims_ver.X_LUT4(fast__15)
+# Loading simprims_ver.X_LUT5(fast__15)
+# Loading simprims_ver.X_LUT5(fast__16)
+# Loading simprims_ver.X_LUT6(fast__26)
+# Loading simprims_ver.X_LUT3(fast__6)
+# Loading simprims_ver.X_LUT6(fast__27)
+# Loading simprims_ver.X_LUT6(fast__28)
+# Loading simprims_ver.X_LUT6(fast__29)
+# Loading simprims_ver.X_LUT6(fast__30)
+# Loading simprims_ver.X_LUT6(fast__31)
+# Loading simprims_ver.X_LUT5(fast__17)
+# Loading simprims_ver.X_LUT4(fast__16)
+# Loading simprims_ver.X_LUT6(fast__32)
+# Loading simprims_ver.X_LUT3(fast__7)
+# Loading simprims_ver.X_LUT5(fast__18)
+# Loading simprims_ver.X_LUT5(fast__19)
+# Loading simprims_ver.X_LUT6(fast__33)
+# Loading simprims_ver.X_LUT6(fast__34)
+# Loading simprims_ver.X_LUT3(fast__8)
+# Loading simprims_ver.X_LUT3(fast__9)
+# Loading simprims_ver.X_LUT6(fast__35)
+# Loading simprims_ver.X_LUT5(fast__20)
+# Loading simprims_ver.X_LUT6(fast__36)
+# Loading simprims_ver.X_LUT5(fast__21)
+# Loading simprims_ver.X_LUT6(fast__37)
+# Loading simprims_ver.X_LUT4(fast__17)
+# Loading simprims_ver.X_INV(fast)
+# Loading simprims_ver.X_SRLC16E(fast)
+# Loading simprims_ver.X_IPAD(fast)
+# Loading simprims_ver.X_OPAD(fast)
+# Loading simprims_ver.X_CKBUF(fast)
+# Loading simprims_ver.X_OBUF(fast)
+# Loading work.uart_sim(fast)
+# Loading work.LM4550_digital_sim(fast)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Loading simulation input data from files ../simdata/audioin_left.hex, ../simdata/audioin_right.hex:
+# Datain(    0) [ left, right] = [       0  ,        0] (hex 00000  00000)
+# Datain(    1) [ left, right] = [     -30  ,      -21] (hex 3ffe2  3ffeb)
+# Datain(    2) [ left, right] = [     497  ,      383] (hex 001f1  0017f)
+# Datain(    3) [ left, right] = [     590  ,      511] (hex 0024e  001ff)
+# Datain(    4) [ left, right] = [     529  ,      412] (hex 00211  0019c)
+# Datain(    5) [ left, right] = [     549  ,      447] (hex 00225  001bf)
+# Datain(    6) [ left, right] = [     529  ,      438] (hex 00211  001b6)
+# Datain(    7) [ left, right] = [     572  ,      439] (hex 0023c  001b7)
+# Datain(    8) [ left, right] = [     511  ,      476] (hex 001ff  001dc)
+# Datain(    9) [ left, right] = [     549  ,      452] (hex 00225  001c4)
+# Datain(   10) [ left, right] = [     550  ,      452] (hex 00226  001c4)
+# Datain(   11) [ left, right] = [     534  ,      469] (hex 00216  001d5)
+# Datain(   12) [ left, right] = [     535  ,      422] (hex 00217  001a6)
+# Datain(   13) [ left, right] = [     548  ,      505] (hex 00224  001f9)
+# Datain(   14) [ left, right] = [     548  ,      479] (hex 00224  001df)
+# Datain(   15) [ left, right] = [     559  ,      509] (hex 0022f  001fd)
+# Datain(   16) [ left, right] = [     552  ,      514] (hex 00228  00202)
+# Datain(   17) [ left, right] = [     535  ,      489] (hex 00217  001e9)
+# Datain(   18) [ left, right] = [     588  ,      453] (hex 0024c  001c5)
+# Datain(   19) [ left, right] = [     563  ,      458] (hex 00233  001ca)
+# -----------------------------------------------
+# Read       48000 samples from input files
+# 
+# -----------------------------------------------
+# Loading the golden output data from files ../simdata/output_left_golden.hex and ../simdata/output_right_golden.hex:
+# golden data out(    0) =        0 (hex 00000 )
+# golden data out(    1) =       -5 (hex 3fffb )
+# golden data out(    2) =       57 (hex 00039 )
+# golden data out(    3) =       39 (hex 00027 )
+# golden data out(    4) =       58 (hex 0003a )
+# golden data out(    5) =       51 (hex 00033 )
+# golden data out(    6) =       45 (hex 0002d )
+# golden data out(    7) =       66 (hex 00042 )
+# golden data out(    8) =       17 (hex 00011 )
+# golden data out(    9) =       48 (hex 00030 )
+# golden data out(   10) =       49 (hex 00031 )
+# golden data out(   11) =       32 (hex 00020 )
+# golden data out(   12) =       56 (hex 00038 )
+# golden data out(   13) =       21 (hex 00015 )
+# golden data out(   14) =       34 (hex 00022 )
+# golden data out(   15) =       25 (hex 00019 )
+# golden data out(   16) =       19 (hex 00013 )
+# golden data out(   17) =       23 (hex 00017 )
+# golden data out(   18) =       67 (hex 00043 )
+# golden data out(   19) =       52 (hex 00034 )
+# -----------------------------------------------
+# Read       48000 samples from golden output file
+# 
+# -----------------------------------------------
+# [time=     0.229 us] Reset released, programming parameters...
+# [time=   479.760 us] Applying input samples...
+# Starting the verification process...
+# done           0 samples.
+# done         100 samples.
+# done         200 samples.
+# done         300 samples.
+# done         400 samples.
+# Break key hit
+# Break in Module X_LUT4 at C:/Xilinx/14.6/ISE_DS/ISE/verilog/src/simprims/X_LUT4.v line 47
+# End time: 21:54:14 on Nov 14,2020, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 0
