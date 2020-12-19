@@ -293,12 +293,43 @@ assign P2in={31'd0,RDY};
 
 
 //-------------------------------------------------------------------------------
+// Instantiate the RAM holding the FIR coefficients:
+wire [6:0]  addr_coefs;
+wire [15:0] dataout_coefs;
+
+DPRAM #( .MEM_INIT_FILENAME("../simdata/FIR.hex") )
+
+      RAM_coefs (
+
+		.clock1(clock), 
+		// connect to the serial interface:
+		.addr1( P6out[6:0] ), 
+		.we1( PFout[2] ), 
+		.datain1( P7out[ 17:0] ), 
+		.dataout1( P7in[ 17:0] ), 
+	
+	   // Connecto to your circuit:
+   	    .clock2(clock), 
+		.addr2(addr_coefs), 
+		.dataout2(dataout_coefs)
+	);
+
+// Sign extend to 32 bits the value read from memory:
+assign P7in[31:18] = {14{P7in[17]}};
+
+
+//-------------------------------------------------------------------------------
 // The example of DSP processing block:
 psdi_dsp   psdi_dsp_1(
             .clock( clock),
 			.reset( reset ),
 			
 			.switches( slide_switches ),
+			
+			// Interface to the RAM memory holding the FIR coefficients:
+			.RAM_coefs_addr( addr_coefs ),
+			.RAM_coefs_dataout( dataout_coefs ),
+			
 			
 			.data_en( DIN_RDY ),
 			
@@ -307,10 +338,9 @@ psdi_dsp   psdi_dsp_1(
 			
 			.right_out( RIGHT_out ),
 			.left_out( LEFT_out )
-		     );
+		    );
 
-
-			 				 				 
+	
 //-------------------------------------------------------------------------------
 // Generate the output mono signal rectified to view in the LEDs the 
 // real-time signal envelope:

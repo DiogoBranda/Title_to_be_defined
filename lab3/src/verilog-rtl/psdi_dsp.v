@@ -6,6 +6,9 @@
 			
 			input data_en,
 			
+            output [6:0] RAM_coefs_addr,
+		    input  [7:0] RAM_coefs_dataout,
+			
 			input [17:0] right_in,
 			input [17:0] left_in,
 			
@@ -30,6 +33,9 @@
 //   end
 //-------------------------------------------------------------------------------
 
+
+// Set the RAM read address bus to zero:
+assign RAM_coefs_addr = 7'd0;
 
 //-------------------------------------------------------------------------------
 // Implement some basic functions using  the audio stream

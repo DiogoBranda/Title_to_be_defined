@@ -82,6 +82,7 @@ parameter
 		  AUDIO_OUT_FILENAME    = "../simdata/audioout.dat",
 		  
 		  MAX_ERRORS          = 20,             // Number of errors found that will stop the simulation
+		  ENABLE_MAX_ERRORS   = 0,              // Set ot 1 to abort simulation when the errors exceed MAX_ERRORS
 		  
 		  // Set the maximum simulation time, as the number of input sampling periods
 		  // or approximately number of input samples. 
@@ -529,6 +530,8 @@ end
 // Self-check process: collect the output and compare to the golden data:
 integer j = 0;
 
+reg [17:0] golden_left, golden_right;
+
 initial
 begin
 
@@ -546,6 +549,9 @@ begin
   while ( 1 )
   begin
     @(posedge SYNC);
+	 golden_left = golden_output_right[j]; // for exporting to the waveform window
+	 golden_right = golden_output_left[j]; // for exporting to the waveform window
+	 
 	 if ( !( RIGHT_OUT == golden_output_right[j] && LEFT_OUT == golden_output_left[j] ) )
 	 begin
 	   $display( "Error: expected LEFT: %d, read %d || RIGHT: %d, read %d.", 
@@ -557,7 +563,7 @@ begin
 	 
 	 j = j + 1;
 	 
-	 if ( error_count == MAX_ERRORS )
+	 if ( ENABLE_MAX_ERRORS && error_count == MAX_ERRORS )
 	 begin
 	   repeat ( 19 )
         @(posedge SYNC);

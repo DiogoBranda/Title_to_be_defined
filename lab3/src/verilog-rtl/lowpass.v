@@ -2,7 +2,7 @@
     The FIR (Finite Impulse Response) digital filter calculates the discrete convolution between
     the input signal x_k and the filter impulse response ℎ
 
-                    yk = Sum(x_(k-1)-hi)
+                    yk = Sum(x_(k-1)*hi)
 
     FIR Filter algoritm
 
@@ -17,23 +17,91 @@
         Calculate Yk + hi * xk-i and store the result to Yk
     endfor
 **/
+
 module lowpass(
-    input clock, // Master clock
-    input reset, // master reset, synchronous, active high
-    input [17:0] datain, // input data
-    input endata, // data clock enable
-    output [17:0] dataout, // output data
+    input wire clock, // Master clock
+    input wire reset, // master reset, synchronous, active high
+    input signed [17:0] datain, // input data
+    input wire endata, // data clock enable
+    output wire [17:0] dataout, // output data
     // Interface to the coefficient memory:
-    output [ 6:0] coefaddress, // 7-bit address
-    input [17:0] coefdata // 18-bit data
+    output reg [ 6:0] coefaddress, // 7-bit address
+    input signed [17:0] coefdata // 18-bit data
  );
 
+reg signed [17:0] Mxin[0:63];//guardar samples
+reg [6:0] Mread; // Numero de samples guardados
+reg [6:0] cont; // Numero de samples processados
 
-always @(posedge clock)
-    begin
-    if ( DIN_RDY )
-        dataout <= 0;
+//FSM
+
+parameter SIZE = 4;
+parameter Wait_DIN_RDY  = 3'b001,Start_FIR = 3'b011 ,Read_Coef = 3'b010,calculate_FIR = 3'b100 ;
+reg   [SIZE-1:0] state;// Seq part of the FSM
+
+// Para o for
+integer i;
+reg signed [42:0] acom;
+
+//Implementaçao
+always @ (posedge clock)
+begin : FSM
+    if (reset == 1'b1) begin // Quando reset
+        for (i=0;i<64;i=i+1) begin
+                Mxin[i] = 18'h0; //Faz shift nos samples guardados.( O ultimo é eliminado)
+        end
+        Mread <=0;//  reset ao numero de samples guardados
+        state <=  Wait_DIN_RDY; // Volta ao estado de espera
+          
         
-        // do whatever has to be done with the new audio sample
-    
-    end
+    end 
+
+    else
+
+    case(state)
+        
+        Wait_DIN_RDY :  if (endata ==1) begin //Neste estado fica a espera do sinal para ir ler
+            //$display("Wait_DIN_RDY %h",Mxin[3]);
+            for (i=63;i>0;i=i-1) begin
+                Mxin[i] = Mxin[i-1]; //Faz shift nos samples guardados.( O ultimo é eliminado)
+            end
+            Mxin[0] <= datain;// insere o novo sample no inicio
+            if (Mread<63)begin
+                Mread <=Mread+1;//incrementa o numero de samples
+                //$display("Mread = %h ", Mread);
+            end
+            cont <= 0; //reset ao numero de samples processados
+            acom<=0;
+            state <=   Read_Coef;// avança para o proximo estado
+        end
+        
+        Read_Coef : if (cont< 63) begin// se o numero de amostras processadas for menor que as existentes entao faz
+            //$display("Read_Coef %h",acom);
+            coefaddress <= cont;// da endereço do coeficiente que quer ler. Tem de esperar um clock
+            state <=  #1  calculate_FIR;
+        end
+        else begin// senao
+            state <=  #1  Wait_DIN_RDY;// ja fez tudo e volta para o estado inicial
+            //$display("Read_Coef->Wait_DIN_RDY %h",acom);
+        end
+            
+        calculate_FIR : if (cont< 63)begin
+            //$display("calculate_FIR",acom);
+            acom <= acom + coefdata * Mxin[cont];    
+            cont <= cont+1;//processou mais um
+            state <=  #1  Read_Coef;
+        end
+        else begin
+            state <=  #1  Wait_DIN_RDY;
+        end
+        
+        
+       
+
+
+        default : state <=  #1  Wait_DIN_RDY;
+    endcase
+end
+
+assign dataout=acom[29:12];//acom[42-13:42-13-18];
+endmodule

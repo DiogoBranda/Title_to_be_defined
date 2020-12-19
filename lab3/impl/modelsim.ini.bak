@@ -60,11 +60,11 @@ osvvm = $MODEL_TECH/../osvvm
 ;mvc_lib = $MODEL_TECH/../mvc_lib
 
 
-unisims_ver = C:\Xilinx\14.6\ISE_DS\ISE\verilog\questasim\10.6a\nt/unisims_ver
-simprims_ver = C:\Xilinx\14.6\ISE_DS\ISE\verilog\questasim\10.6a\nt/simprims_ver
-unimacro_ver = C:\Xilinx\14.6\ISE_DS\ISE\verilog\questasim\10.6a\nt/unimacro_ver
-xilinxcorelib_ver = C:\Xilinx\14.6\ISE_DS\ISE\verilog\questasim\10.6a\nt/xilinxcorelib_ver
-secureip = C:\Xilinx\14.6\ISE_DS\ISE\verilog\questasim\10.6a\nt/secureip
+unisims_ver = C:\Xilinx\14.6\ISE_DS\ISE/verilog/questasim/10.6a/nt64/unisims_ver
+simprims_ver = C:\Xilinx\14.6\ISE_DS\ISE/verilog/questasim/10.6a/nt64/simprims_ver
+unimacro_ver = C:\Xilinx\14.6\ISE_DS\ISE/verilog/questasim/10.6a/nt64/unimacro_ver
+xilinxcorelib_ver = C:\Xilinx\14.6\ISE_DS\ISE/verilog/questasim/10.6a/nt64/xilinxcorelib_ver
+secureip = C:\Xilinx\14.6\ISE_DS\ISE/verilog/questasim/10.6a/nt64/secureip
 
 [DefineOptionset]
 ; Define optionset entries for the various compilers, vmake, and vsim.
@@ -704,7 +704,7 @@ VoptFlow = 1
 
 ; Simulator resolution
 ; Set to fs, ps, ns, us, ms, or sec with optional prefix of 1, 10, or 100.
-Resolution = ps
+Resolution = ns
 
 ; Disable certain code coverage exclusions automatically. 
 ; Assertions and FSM are exluded from the code coverage by default
@@ -1853,5 +1853,4 @@ suppress = 8780 ;an explanation can be had by running: verror 8780
 ; Set the number of pages deleted before library cleanup can occur.
 ; This setting is applied together with FlatLibPageDeletePercentage.
 ; FlatLibPageDeleteThreshold = 1000
-
 
