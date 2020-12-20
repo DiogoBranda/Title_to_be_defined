@@ -1,0 +1,3 @@
+vhdtdtfi -lib work C:/Git/Title_to_be_defined/lab3/src/verilog-rtl/lowpass.v -lang verilog -prj psdlab3 -o lowpass.spl -module lowpass -template C:/Xilinx/14.6/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 lowpass.spl C:/Git/Title_to_be_defined/lab3/impl/lowpass.sym 
+vhdtdtfi -lang verilog -prj psdlab3 -o C:/Git/Title_to_be_defined/lab3/impl/lowpass.tfi -lib work C:/Git/Title_to_be_defined/lab3/src/verilog-rtl//lowpass.v -module lowpass -template C:/Xilinx/14.6/ISE_DS/ISE//data/tfi.tft -deleteonerror 

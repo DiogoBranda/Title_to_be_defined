@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+lowpass instance_name (
+    .clock(clock), 
+    .reset(reset), 
+    .datain(datain), 
+    .endata(endata), 
+    .dataout(dataout), 
+    .coefaddress(coefaddress), 
+    .coefdata(coefdata)
+    );
+
+

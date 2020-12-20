@@ -1,0 +1,7 @@
+verilog work "../src/verilog-rtl/lowpass.v"
+verilog work "../src/verilog-rtl/uart.v"
+verilog work "../src/verilog-rtl/psdi_dsp.v"
+verilog work "../src/verilog-rtl/LM4550_controler.v"
+verilog work "../src/verilog-rtl/ioports16V2018.v"
+verilog work "../src/verilog-rtl/DPRAM.v"
+verilog work "../src/verilog-rtl/s6base_top.v"

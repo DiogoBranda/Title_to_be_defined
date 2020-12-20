@@ -537,7 +537,7 @@ begin
 
   // Wait for the event triggered by the input driver:
   @ startgetouts;  
-  $display("Starting the verification process...");
+  $display("Starting the verification process.vv..");
   
   // Wait for the CODEC latency:
   repeat ( N_SAMPLES_LATENCY )
@@ -582,6 +582,5 @@ end
 `include "../src/verilog-tb/verilog-tasks.v"
 
 endmodule
-
 
 

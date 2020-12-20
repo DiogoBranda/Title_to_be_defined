@@ -1,0 +1,129 @@
+ISim log file
+Running: C:\Git\Title_to_be_defined\lab3\impl\s6base_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Git/Title_to_be_defined/lab3/impl/s6base_tb_isim_beh.wdb 
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "C:/Git/Title_to_be_defined/lab3/src/verilog-rtl/s6base_top.v" Line 298.  For instance s6base_top_1/RAM_coefs/, width 18 of formal port dataout2 is not equal to width 16 of actual signal dataout_coefs.
+WARNING: File "C:/Git/Title_to_be_defined/lab3/src/verilog-rtl/s6base_top.v" Line 298.  For instance s6base_top_1/psdi_dsp_1/, width 18 of formal port RAM_coefs_dataout is not equal to width 16 of actual signal dataout_coefs.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Loading simulation input data from files ../simdata/audioin_left.hex, ../simdata/audioin_right.hex:
+Datain(0) [ left, right] = [0  , 0] (hex 00000  00000)
+Datain(1) [ left, right] = [-30  , -22] (hex 3ffe2  3ffea)
+Datain(2) [ left, right] = [496  , 384] (hex 001f0  00180)
+Datain(3) [ left, right] = [591  , 508] (hex 0024f  001fc)
+Datain(4) [ left, right] = [525  , 414] (hex 0020d  0019e)
+Datain(5) [ left, right] = [555  , 444] (hex 0022b  001bc)
+Datain(6) [ left, right] = [521  , 441] (hex 00209  001b9)
+Datain(7) [ left, right] = [581  , 438] (hex 00245  001b6)
+Datain(8) [ left, right] = [501  , 478] (hex 001f5  001de)
+Datain(9) [ left, right] = [558  , 451] (hex 0022e  001c3)
+Datain(10) [ left, right] = [543  , 453] (hex 0021f  001c5)
+Datain(11) [ left, right] = [538  , 468] (hex 0021a  001d4)
+Datain(12) [ left, right] = [535  , 423] (hex 00217  001a7)
+Datain(13) [ left, right] = [546  , 506] (hex 00222  001fa)
+Datain(14) [ left, right] = [551  , 478] (hex 00227  001de)
+Datain(15) [ left, right] = [553  , 510] (hex 00229  001fe)
+Datain(16) [ left, right] = [558  , 513] (hex 0022e  00201)
+Datain(17) [ left, right] = [530  , 491] (hex 00212  001eb)
+Datain(18) [ left, right] = [593  , 451] (hex 00251  001c3)
+Datain(19) [ left, right] = [560  , 459] (hex 00230  001cb)
+-----------------------------------------------
+Read        4800 samples from input files
+
+-----------------------------------------------
+Loading the golden output data from files ../simdata/output_left_golden.hex and ../simdata/output_right_golden.hex:
+golden data out(0) = 0 (hex 00000 )
+golden data out(1) = 0 (hex 00000 )
+golden data out(2) = 0 (hex 00000 )
+golden data out(3) = 0 (hex 00000 )
+golden data out(4) = 0 (hex 00000 )
+golden data out(5) = 0 (hex 00000 )
+golden data out(6) = 0 (hex 00000 )
+golden data out(7) = 0 (hex 00000 )
+golden data out(8) = 0 (hex 00000 )
+golden data out(9) = 0 (hex 00000 )
+golden data out(10) = 0 (hex 00000 )
+golden data out(11) = 0 (hex 00000 )
+golden data out(12) = 0 (hex 00000 )
+golden data out(13) = 0 (hex 00000 )
+golden data out(14) = 0 (hex 00000 )
+golden data out(15) = 1 (hex 00001 )
+golden data out(16) = 2 (hex 00002 )
+golden data out(17) = 3 (hex 00003 )
+golden data out(18) = 4 (hex 00004 )
+golden data out(19) = 2 (hex 00002 )
+-----------------------------------------------
+Read        4800 samples from golden output file
+
+-----------------------------------------------
+Finished circuit initialization process.
+[time=     0.229 us] Reset released, programming parameters...
+# run all
+[time=   479.759 us] Applying input samples...
+Starting the verification process.vv..
+done           0 samples.
+done         100 samples.
+done         200 samples.
+done         300 samples.
+done         400 samples.
+done         500 samples.
+done         600 samples.
+done         700 samples.
+done         800 samples.
+done         900 samples.
+done        1000 samples.
+done        1100 samples.
+done        1200 samples.
+done        1300 samples.
+done        1400 samples.
+done        1500 samples.
+done        1600 samples.
+done        1700 samples.
+done        1800 samples.
+done        1900 samples.
+done        2000 samples.
+done        2100 samples.
+done        2200 samples.
+done        2300 samples.
+done        2400 samples.
+done        2500 samples.
+done        2600 samples.
+done        2700 samples.
+done        2800 samples.
+done        2900 samples.
+done        3000 samples.
+done        3100 samples.
+done        3200 samples.
+done        3300 samples.
+done        3400 samples.
+done        3500 samples.
+done        3600 samples.
+done        3700 samples.
+done        3800 samples.
+done        3900 samples.
+done        4000 samples.
+done        4100 samples.
+done        4200 samples.
+done        4300 samples.
+done        4400 samples.
+done        4500 samples.
+done        4600 samples.
+done        4700 samples.
+-------------------------------------------------------
+
+          #####     ##     ####    ####
+          #    #   #  #   #       #
+          #    #  #    #   ####    ####
+          #####   ######       #       #
+          #       #    #  #    #  #    #
+          #       #    #   ####    ####
+
+-------------------------------------------------------
+
+Stopped at time : 100521169005 ps(1) :  in File "C:/Git/Title_to_be_defined/lab3/src/verilog-tb/verilog-tasks.v" Line 116 

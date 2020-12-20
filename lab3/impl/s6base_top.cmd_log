@@ -1,0 +1,60 @@
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+par -w -intstyle ise -ol high -mt off s6base_top_map.ncd s6base_top.ncd s6base_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr s6base_top.pcf 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+par -w -intstyle ise -ol high -mt off s6base_top_map.ncd s6base_top.ncd s6base_top.pcf 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+par -w -intstyle ise -ol high -mt off s6base_top_map.ncd s6base_top.ncd s6base_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr s6base_top.pcf 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+par -w -intstyle ise -ol high -mt off s6base_top_map.ncd s6base_top.ncd s6base_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr s6base_top.pcf 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+par -w -intstyle ise -ol high -mt off s6base_top_map.ncd s6base_top.ncd s6base_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr s6base_top.pcf 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+par -w -intstyle ise -ol high -mt off s6base_top_map.ncd s6base_top.ncd s6base_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr s6base_top.pcf 
+xst -intstyle ise -ifn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.xst" -ofn "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o s6base_top_map.ncd s6base_top.ngd s6base_top.pcf 
+par -w -intstyle ise -ol high -mt off s6base_top_map.ncd s6base_top.ncd s6base_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr s6base_top.pcf 

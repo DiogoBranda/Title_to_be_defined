@@ -1,0 +1,76 @@
+#:C19    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.68d
+#Current Working Directory:
+#:D   C:\Git\Title_to_be_defined\lab3\impl
+#Date/Time:
+#:T   Sun Dec 20 16:26:52 2020
+#------------------------------
+	#Reading s6base_top_map.ncd...
+	#Loading device for application Rf_Device from file '6slx45.nph' in environment C:\Xilinx\14.6\ISE_DS\ISE\.
+	#   "s6base_top" is an NCD, version 3.2, device xc6slx45, package csg324, speed -3
+	#Design creation date: 2020.12.20.16.26.22
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+unselect -all
+	#4
+select site 'SLICE_X26Y64'
+	#site "SLICE_X26Y64",  type = SLICEM  (RPM grid X69Y256)
+	#5
+unselect -all
+	#6
+unselect -all
+	#7
+select site 'SLICE_X27Y63'
+	#site "SLICE_X27Y63",  type = SLICEX  (RPM grid X71Y252)
+	#8
+unselect -all
+	#9
+select site 'SLICE_X27Y63'
+	#site "SLICE_X27Y63",  type = SLICEX  (RPM grid X71Y252)
+	#10
+unselect -all
+	#11
+select site 'SLICE_X27Y63'
+	#site "SLICE_X27Y63",  type = SLICEX  (RPM grid X71Y252)
+	#12
+post block
+	#<C5LUT>.
+	#13
+unselect -all
+	#14
+select net 'BIT_CLK_BUFGP'
+	#net "BIT_CLK_BUFGP"
+	#15
+unselect -all
+	#16
+select comp 'RAM_coefs/dataout1<15>'
+	#comp "RAM_coefs/dataout1<15>",  site "SLICE_X26Y63",  type = SLICEM  (RPM grid X69Y252)
+	#17
+unselect -all
+	#18
+select site 'SLICE_X27Y63'
+	#site "SLICE_X27Y63",  type = SLICEX  (RPM grid X71Y252)
+	#19
+unselect -all
+	#20
+select net 'ioports16_1/out6<0>'
+	#net "ioports16_1/out6<0>"
+	#21
+unselect -all
+	#22
+select net 'BIT_CLK_BUFGP'
+	#net "BIT_CLK_BUFGP"
+	#23
+unselect -all
+	#24
+select net 'uart_1/dout<2>'
+	#net "uart_1/dout<2>"
+	#25
+unselect -all

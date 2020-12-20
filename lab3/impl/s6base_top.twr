@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.6 Trace  (nt)
+Release 14.6 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.6\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
-3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml s6base_top.twx s6base_top.ncd -o s6base_top.twr
 s6base_top.pcf
 
 Design file:              s6base_top.ncd
@@ -29,21 +29,21 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clock_freq = PERIOD TIMEGRP "clock_freq" 5 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 8097 paths analyzed, 3989 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.902ns.
+ 191570 paths analyzed, 7381 endpoints analyzed, 211 failing endpoints
+ 211 timing errors detected. (211 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  12.497ns.
 --------------------------------------------------------------------------------
 
-Paths for end point LM4550_controler_1/IN_SHIFT_6 (SLICE_X48Y84.C6), 1 path
+Paths for end point psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP48_X0Y12.C41), 1935 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.049ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               LM4550_controler_1/DELAY_SYNC1 (FF)
-  Destination:          LM4550_controler_1/IN_SHIFT_6 (FF)
-  Requirement:          2.500ns
-  Data Path Delay:      2.399ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.017ns (0.239 - 0.256)
+Slack (setup path):     -7.497ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_22 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.471ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.009ns (0.504 - 0.495)
   Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
-  Destination Clock:    BIT_CLK_BUFGP falling at 2.500ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -52,32 +52,43 @@ Slack (setup path):     0.049ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: LM4550_controler_1/DELAY_SYNC1 to LM4550_controler_1/IN_SHIFT_6
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_22 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X47Y93.AQ      Tcko                  0.391   LM4550_controler_1/DELAY_SYNC1
-                                                       LM4550_controler_1/DELAY_SYNC1
-    SLICE_X48Y84.C6      net (fanout=350)      1.719   LM4550_controler_1/DELAY_SYNC1
-    SLICE_X48Y84.CLK     Tas                   0.289   LM4550_controler_1/IN_SHIFT<7>
-                                                       LM4550_controler_1/IN_SHIFT_6_rstpot
-                                                       LM4550_controler_1/IN_SHIFT_6
+    SLICE_X22Y39.CQ      Tcko                  0.447   psdi_dsp_1/lowpass_right/Mxin_63<71>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_22
+    SLICE_X11Y39.B3      net (fanout=2)        2.182   psdi_dsp_1/lowpass_right/Mxin_63<22>
+    SLICE_X11Y39.B       Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<275>
+                                                       mux12_14
+    SLICE_X10Y39.B5      net (fanout=1)        0.186   mux12_14
+    SLICE_X10Y39.B       Tilo                  0.203   psdi_dsp_1/lowpass_right/Mxin_63<368>
+                                                       mux12_8
+    SLICE_X6Y37.C1       net (fanout=1)        0.909   mux12_8
+    SLICE_X6Y37.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       psdi_dsp_1/lowpass_right/cont<5>121
+    DSP48_X0Y12.A4       net (fanout=1)        1.715   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<4>
+    DSP48_X0Y12.P41      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X7Y51.A2       net (fanout=1)        1.138   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<41>
+    SLICE_X7Y51.A        Tilo                  0.259   psdi_dsp_1/lowpass_right/acom<37>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<41>1
+    DSP48_X0Y12.C41      net (fanout=1)        0.304   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<41>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
     -------------------------------------------------  ---------------------------
-    Total                                      2.399ns (0.680ns logic, 1.719ns route)
-                                                       (28.3% logic, 71.7% route)
+    Total                                     12.471ns (6.037ns logic, 6.434ns route)
+                                                       (48.4% logic, 51.6% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point LM4550_controler_1/IN_SHIFT_7 (SLICE_X48Y84.D6), 1 path
---------------------------------------------------------------------------------
-Slack (setup path):     0.049ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               LM4550_controler_1/DELAY_SYNC1 (FF)
-  Destination:          LM4550_controler_1/IN_SHIFT_7 (FF)
-  Requirement:          2.500ns
-  Data Path Delay:      2.399ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.017ns (0.239 - 0.256)
+Slack (setup path):     -7.427ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_239 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.400ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.008ns (0.504 - 0.496)
   Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
-  Destination Clock:    BIT_CLK_BUFGP falling at 2.500ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -86,32 +97,43 @@ Slack (setup path):     0.049ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: LM4550_controler_1/DELAY_SYNC1 to LM4550_controler_1/IN_SHIFT_7
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_239 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X47Y93.AQ      Tcko                  0.391   LM4550_controler_1/DELAY_SYNC1
-                                                       LM4550_controler_1/DELAY_SYNC1
-    SLICE_X48Y84.D6      net (fanout=350)      1.719   LM4550_controler_1/DELAY_SYNC1
-    SLICE_X48Y84.CLK     Tas                   0.289   LM4550_controler_1/IN_SHIFT<7>
-                                                       LM4550_controler_1/IN_SHIFT_7_rstpot
-                                                       LM4550_controler_1/IN_SHIFT_7
+    SLICE_X9Y38.AQ       Tcko                  0.391   psdi_dsp_1/lowpass_right/Mxin_63<231>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_239
+    SLICE_X11Y39.C3      net (fanout=2)        1.602   psdi_dsp_1/lowpass_right/Mxin_63<239>
+    SLICE_X11Y39.C       Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<275>
+                                                       mux13_125
+    SLICE_X12Y38.B4      net (fanout=1)        0.488   mux13_125
+    SLICE_X12Y38.B       Tilo                  0.205   psdi_dsp_1/lowpass_right/Mxin_63<123>
+                                                       mux13_8
+    SLICE_X5Y38.C1       net (fanout=1)        1.687   mux13_8
+    SLICE_X5Y38.C        Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<823>
+                                                       psdi_dsp_1/lowpass_right/cont<5>131
+    DSP48_X0Y12.A5       net (fanout=1)        1.143   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<5>
+    DSP48_X0Y12.P41      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X7Y51.A2       net (fanout=1)        1.138   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<41>
+    SLICE_X7Y51.A        Tilo                  0.259   psdi_dsp_1/lowpass_right/acom<37>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<41>1
+    DSP48_X0Y12.C41      net (fanout=1)        0.304   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<41>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
     -------------------------------------------------  ---------------------------
-    Total                                      2.399ns (0.680ns logic, 1.719ns route)
-                                                       (28.3% logic, 71.7% route)
+    Total                                     12.400ns (6.038ns logic, 6.362ns route)
+                                                       (48.7% logic, 51.3% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point LM4550_controler_1/IN_SHIFT_41 (SLICE_X44Y87.SR), 1 path
---------------------------------------------------------------------------------
-Slack (setup path):     0.052ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset (FF)
-  Destination:          LM4550_controler_1/IN_SHIFT_41 (FF)
-  Requirement:          2.500ns
-  Data Path Delay:      2.389ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.024ns (0.231 - 0.255)
+Slack (setup path):     -7.424ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_670 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.400ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.011ns (0.504 - 0.493)
   Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
-  Destination Clock:    BIT_CLK_BUFGP falling at 2.500ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -120,106 +142,413 @@ Slack (setup path):     0.052ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: reset to LM4550_controler_1/IN_SHIFT_41
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_670 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X52Y92.AQ      Tcko                  0.447   reset
-                                                       reset
-    SLICE_X44Y87.SR      net (fanout=197)      1.500   reset
-    SLICE_X44Y87.CLK     Tsrck                 0.442   LM4550_controler_1/IN_SHIFT<43>
-                                                       LM4550_controler_1/IN_SHIFT_41
+    SLICE_X6Y40.CQ       Tcko                  0.447   psdi_dsp_1/lowpass_right/Mxin_63<671>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_670
+    SLICE_X6Y40.B1       net (fanout=2)        1.646   psdi_dsp_1/lowpass_right/Mxin_63<670>
+    SLICE_X6Y40.B        Tilo                  0.203   psdi_dsp_1/lowpass_right/Mxin_63<671>
+                                                       mux12_122
+    SLICE_X6Y37.D1       net (fanout=1)        1.498   mux12_122
+    SLICE_X6Y37.D        Tilo                  0.203   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       mux12_7
+    SLICE_X6Y37.C6       net (fanout=1)        0.118   mux12_7
+    SLICE_X6Y37.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       psdi_dsp_1/lowpass_right/cont<5>121
+    DSP48_X0Y12.A4       net (fanout=1)        1.715   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<4>
+    DSP48_X0Y12.P41      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X7Y51.A2       net (fanout=1)        1.138   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<41>
+    SLICE_X7Y51.A        Tilo                  0.259   psdi_dsp_1/lowpass_right/acom<37>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<41>1
+    DSP48_X0Y12.C41      net (fanout=1)        0.304   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<41>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
     -------------------------------------------------  ---------------------------
-    Total                                      2.389ns (0.889ns logic, 1.500ns route)
-                                                       (37.2% logic, 62.8% route)
+    Total                                     12.400ns (5.981ns logic, 6.419ns route)
+                                                       (48.2% logic, 51.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP48_X0Y12.C43), 1935 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -7.419ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_22 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.393ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.009ns (0.504 - 0.495)
+  Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_22 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y39.CQ      Tcko                  0.447   psdi_dsp_1/lowpass_right/Mxin_63<71>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_22
+    SLICE_X11Y39.B3      net (fanout=2)        2.182   psdi_dsp_1/lowpass_right/Mxin_63<22>
+    SLICE_X11Y39.B       Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<275>
+                                                       mux12_14
+    SLICE_X10Y39.B5      net (fanout=1)        0.186   mux12_14
+    SLICE_X10Y39.B       Tilo                  0.203   psdi_dsp_1/lowpass_right/Mxin_63<368>
+                                                       mux12_8
+    SLICE_X6Y37.C1       net (fanout=1)        0.909   mux12_8
+    SLICE_X6Y37.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       psdi_dsp_1/lowpass_right/cont<5>121
+    DSP48_X0Y12.A4       net (fanout=1)        1.715   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<4>
+    DSP48_X0Y12.P42      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X6Y51.C6       net (fanout=1)        0.499   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<42>
+    SLICE_X6Y51.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/acom<42>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<42>1
+    DSP48_X0Y12.C43      net (fanout=6)        0.920   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<42>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     12.393ns (5.982ns logic, 6.411ns route)
+                                                       (48.3% logic, 51.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -7.349ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_239 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.322ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.008ns (0.504 - 0.496)
+  Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_239 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y38.AQ       Tcko                  0.391   psdi_dsp_1/lowpass_right/Mxin_63<231>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_239
+    SLICE_X11Y39.C3      net (fanout=2)        1.602   psdi_dsp_1/lowpass_right/Mxin_63<239>
+    SLICE_X11Y39.C       Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<275>
+                                                       mux13_125
+    SLICE_X12Y38.B4      net (fanout=1)        0.488   mux13_125
+    SLICE_X12Y38.B       Tilo                  0.205   psdi_dsp_1/lowpass_right/Mxin_63<123>
+                                                       mux13_8
+    SLICE_X5Y38.C1       net (fanout=1)        1.687   mux13_8
+    SLICE_X5Y38.C        Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<823>
+                                                       psdi_dsp_1/lowpass_right/cont<5>131
+    DSP48_X0Y12.A5       net (fanout=1)        1.143   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<5>
+    DSP48_X0Y12.P42      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X6Y51.C6       net (fanout=1)        0.499   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<42>
+    SLICE_X6Y51.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/acom<42>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<42>1
+    DSP48_X0Y12.C43      net (fanout=6)        0.920   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<42>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     12.322ns (5.983ns logic, 6.339ns route)
+                                                       (48.6% logic, 51.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -7.346ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_670 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.322ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.011ns (0.504 - 0.493)
+  Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_670 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y40.CQ       Tcko                  0.447   psdi_dsp_1/lowpass_right/Mxin_63<671>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_670
+    SLICE_X6Y40.B1       net (fanout=2)        1.646   psdi_dsp_1/lowpass_right/Mxin_63<670>
+    SLICE_X6Y40.B        Tilo                  0.203   psdi_dsp_1/lowpass_right/Mxin_63<671>
+                                                       mux12_122
+    SLICE_X6Y37.D1       net (fanout=1)        1.498   mux12_122
+    SLICE_X6Y37.D        Tilo                  0.203   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       mux12_7
+    SLICE_X6Y37.C6       net (fanout=1)        0.118   mux12_7
+    SLICE_X6Y37.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       psdi_dsp_1/lowpass_right/cont<5>121
+    DSP48_X0Y12.A4       net (fanout=1)        1.715   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<4>
+    DSP48_X0Y12.P42      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X6Y51.C6       net (fanout=1)        0.499   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<42>
+    SLICE_X6Y51.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/acom<42>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<42>1
+    DSP48_X0Y12.C43      net (fanout=6)        0.920   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<42>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     12.322ns (5.926ns logic, 6.396ns route)
+                                                       (48.1% logic, 51.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP48_X0Y12.C29), 1935 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -7.382ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_22 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.356ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.009ns (0.504 - 0.495)
+  Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_22 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y39.CQ      Tcko                  0.447   psdi_dsp_1/lowpass_right/Mxin_63<71>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_22
+    SLICE_X11Y39.B3      net (fanout=2)        2.182   psdi_dsp_1/lowpass_right/Mxin_63<22>
+    SLICE_X11Y39.B       Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<275>
+                                                       mux12_14
+    SLICE_X10Y39.B5      net (fanout=1)        0.186   mux12_14
+    SLICE_X10Y39.B       Tilo                  0.203   psdi_dsp_1/lowpass_right/Mxin_63<368>
+                                                       mux12_8
+    SLICE_X6Y37.C1       net (fanout=1)        0.909   mux12_8
+    SLICE_X6Y37.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       psdi_dsp_1/lowpass_right/cont<5>121
+    DSP48_X0Y12.A4       net (fanout=1)        1.715   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<4>
+    DSP48_X0Y12.P29      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X6Y50.B4       net (fanout=1)        1.079   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<29>
+    SLICE_X6Y50.B        Tilo                  0.203   psdi_dsp_1/lowpass_right/acom<30>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<29>1
+    DSP48_X0Y12.C29      net (fanout=1)        0.304   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<29>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     12.356ns (5.981ns logic, 6.375ns route)
+                                                       (48.4% logic, 51.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -7.312ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_239 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.285ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.008ns (0.504 - 0.496)
+  Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_239 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y38.AQ       Tcko                  0.391   psdi_dsp_1/lowpass_right/Mxin_63<231>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_239
+    SLICE_X11Y39.C3      net (fanout=2)        1.602   psdi_dsp_1/lowpass_right/Mxin_63<239>
+    SLICE_X11Y39.C       Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<275>
+                                                       mux13_125
+    SLICE_X12Y38.B4      net (fanout=1)        0.488   mux13_125
+    SLICE_X12Y38.B       Tilo                  0.205   psdi_dsp_1/lowpass_right/Mxin_63<123>
+                                                       mux13_8
+    SLICE_X5Y38.C1       net (fanout=1)        1.687   mux13_8
+    SLICE_X5Y38.C        Tilo                  0.259   psdi_dsp_1/lowpass_right/Mxin_63<823>
+                                                       psdi_dsp_1/lowpass_right/cont<5>131
+    DSP48_X0Y12.A5       net (fanout=1)        1.143   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<5>
+    DSP48_X0Y12.P29      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X6Y50.B4       net (fanout=1)        1.079   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<29>
+    SLICE_X6Y50.B        Tilo                  0.203   psdi_dsp_1/lowpass_right/acom<30>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<29>1
+    DSP48_X0Y12.C29      net (fanout=1)        0.304   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<29>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     12.285ns (5.982ns logic, 6.303ns route)
+                                                       (48.7% logic, 51.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -7.309ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               psdi_dsp_1/lowpass_right/Mxin_63_670 (FF)
+  Destination:          psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT (DSP)
+  Requirement:          5.000ns
+  Data Path Delay:      12.285ns (Levels of Logic = 5)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.011ns (0.504 - 0.493)
+  Source Clock:         BIT_CLK_BUFGP rising at 0.000ns
+  Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: psdi_dsp_1/lowpass_right/Mxin_63_670 to psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y40.CQ       Tcko                  0.447   psdi_dsp_1/lowpass_right/Mxin_63<671>
+                                                       psdi_dsp_1/lowpass_right/Mxin_63_670
+    SLICE_X6Y40.B1       net (fanout=2)        1.646   psdi_dsp_1/lowpass_right/Mxin_63<670>
+    SLICE_X6Y40.B        Tilo                  0.203   psdi_dsp_1/lowpass_right/Mxin_63<671>
+                                                       mux12_122
+    SLICE_X6Y37.D1       net (fanout=1)        1.498   mux12_122
+    SLICE_X6Y37.D        Tilo                  0.203   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       mux12_7
+    SLICE_X6Y37.C6       net (fanout=1)        0.118   mux12_7
+    SLICE_X6Y37.C        Tilo                  0.204   psdi_dsp_1/lowpass_right/cont_0_22
+                                                       psdi_dsp_1/lowpass_right/cont<5>121
+    DSP48_X0Y12.A4       net (fanout=1)        1.715   psdi_dsp_1/lowpass_right/cont[5]_Mxin[63][17]_wide_mux_15_OUT<4>
+    DSP48_X0Y12.P29      Tdspdo_A_P            4.560   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    SLICE_X6Y50.B4       net (fanout=1)        1.079   psdi_dsp_1/lowpass_right/acom[42]_coefdata[17]_add_17_OUT<29>
+    SLICE_X6Y50.B        Tilo                  0.203   psdi_dsp_1/lowpass_right/acom<30>
+                                                       psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<29>1
+    DSP48_X0Y12.C29      net (fanout=1)        0.304   psdi_dsp_1/lowpass_right/state[3]_acom[42]_select_29_OUT<29>
+    DSP48_X0Y12.CLK      Tdspdck_C_CREG        0.105   psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+                                                       psdi_dsp_1/lowpass_right/Maddsub_coefdata[17]_cont[5]_MuLt_16_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     12.285ns (5.925ns logic, 6.360ns route)
+                                                       (48.2% logic, 51.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clock_freq = PERIOD TIMEGRP "clock_freq" 5 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point uart_1/baudtxcount_3 (SLICE_X34Y89.CE), 1 path
+Paths for end point uart_1/baudrxcount_11 (SLICE_X30Y74.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.360ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               uart_1/statetxbc (FF)
-  Destination:          uart_1/baudtxcount_3 (FF)
+Slack (hold path):      0.331ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uart_1/staterxbc (FF)
+  Destination:          uart_1/baudrxcount_11 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.363ns (Levels of Logic = 0)
-  Clock Path Skew:      0.003ns (0.068 - 0.065)
+  Data Path Delay:      0.335ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.071 - 0.067)
   Source Clock:         BIT_CLK_BUFGP rising at 5.000ns
   Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: uart_1/statetxbc to uart_1/baudtxcount_3
+  Minimum Data Path at Fast Process Corner: uart_1/staterxbc to uart_1/baudrxcount_11
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X37Y89.BQ      Tcko                  0.198   uart_1/starttxbit
-                                                       uart_1/statetxbc
-    SLICE_X34Y89.CE      net (fanout=7)        0.273   uart_1/statetxbc
-    SLICE_X34Y89.CLK     Tckce       (-Th)     0.108   uart_1/baudtxcount<3>
-                                                       uart_1/baudtxcount_3
+    SLICE_X33Y74.AQ      Tcko                  0.198   uart_1/staterxbc
+                                                       uart_1/staterxbc
+    SLICE_X30Y74.CE      net (fanout=10)       0.245   uart_1/staterxbc
+    SLICE_X30Y74.CLK     Tckce       (-Th)     0.108   uart_1/baudrxcount<11>
+                                                       uart_1/baudrxcount_11
     -------------------------------------------------  ---------------------------
-    Total                                      0.363ns (0.090ns logic, 0.273ns route)
-                                                       (24.8% logic, 75.2% route)
+    Total                                      0.335ns (0.090ns logic, 0.245ns route)
+                                                       (26.9% logic, 73.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point uart_1/baudtxcount_0 (SLICE_X34Y89.CE), 1 path
+Paths for end point uart_1/baudrxcount_10 (SLICE_X30Y74.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.376ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               uart_1/statetxbc (FF)
-  Destination:          uart_1/baudtxcount_0 (FF)
+Slack (hold path):      0.335ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uart_1/staterxbc (FF)
+  Destination:          uart_1/baudrxcount_10 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.379ns (Levels of Logic = 0)
-  Clock Path Skew:      0.003ns (0.068 - 0.065)
+  Data Path Delay:      0.339ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.071 - 0.067)
   Source Clock:         BIT_CLK_BUFGP rising at 5.000ns
   Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: uart_1/statetxbc to uart_1/baudtxcount_0
+  Minimum Data Path at Fast Process Corner: uart_1/staterxbc to uart_1/baudrxcount_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X37Y89.BQ      Tcko                  0.198   uart_1/starttxbit
-                                                       uart_1/statetxbc
-    SLICE_X34Y89.CE      net (fanout=7)        0.273   uart_1/statetxbc
-    SLICE_X34Y89.CLK     Tckce       (-Th)     0.092   uart_1/baudtxcount<3>
-                                                       uart_1/baudtxcount_0
+    SLICE_X33Y74.AQ      Tcko                  0.198   uart_1/staterxbc
+                                                       uart_1/staterxbc
+    SLICE_X30Y74.CE      net (fanout=10)       0.245   uart_1/staterxbc
+    SLICE_X30Y74.CLK     Tckce       (-Th)     0.104   uart_1/baudrxcount<11>
+                                                       uart_1/baudrxcount_10
     -------------------------------------------------  ---------------------------
-    Total                                      0.379ns (0.106ns logic, 0.273ns route)
-                                                       (28.0% logic, 72.0% route)
+    Total                                      0.339ns (0.094ns logic, 0.245ns route)
+                                                       (27.7% logic, 72.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point reset_shift3 (SLICE_X54Y77.DX), 1 path
+Paths for end point uart_1/baudrxcount_9 (SLICE_X30Y74.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.379ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               reset_shift2 (FF)
-  Destination:          reset_shift3 (FF)
+Slack (hold path):      0.337ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uart_1/staterxbc (FF)
+  Destination:          uart_1/baudrxcount_9 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.379ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.341ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.071 - 0.067)
   Source Clock:         BIT_CLK_BUFGP rising at 5.000ns
   Destination Clock:    BIT_CLK_BUFGP rising at 5.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: reset_shift2 to reset_shift3
+  Minimum Data Path at Fast Process Corner: uart_1/staterxbc to uart_1/baudrxcount_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X54Y77.CQ      Tcko                  0.200   reset_shift3
-                                                       reset_shift2
-    SLICE_X54Y77.DX      net (fanout=1)        0.131   reset_shift2
-    SLICE_X54Y77.CLK     Tckdi       (-Th)    -0.048   reset_shift3
-                                                       reset_shift3
+    SLICE_X33Y74.AQ      Tcko                  0.198   uart_1/staterxbc
+                                                       uart_1/staterxbc
+    SLICE_X30Y74.CE      net (fanout=10)       0.245   uart_1/staterxbc
+    SLICE_X30Y74.CLK     Tckce       (-Th)     0.102   uart_1/baudrxcount<11>
+                                                       uart_1/baudrxcount_9
     -------------------------------------------------  ---------------------------
-    Total                                      0.379ns (0.248ns logic, 0.131ns route)
-                                                       (65.4% logic, 34.6% route)
+    Total                                      0.341ns (0.096ns logic, 0.245ns route)
+                                                       (28.2% logic, 71.8% route)
 
 --------------------------------------------------------------------------------
 
 Component Switching Limit Checks: TS_clock_freq = PERIOD TIMEGRP "clock_freq" 5 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 1.876ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: RAM_coefs/Mram_RAM/CLKAWRCLK
+  Logical resource: RAM_coefs/Mram_RAM/CLKAWRCLK
+  Location pin: RAMB8_X1Y24.CLKAWRCLK
+  Clock network: BIT_CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 1.876ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: RAM_coefs/Mram_RAM/CLKBRDCLK
+  Logical resource: RAM_coefs/Mram_RAM/CLKBRDCLK
+  Location pin: RAMB8_X1Y24.CLKBRDCLK
+  Clock network: BIT_CLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 3.270ns (period - min period limit)
   Period: 5.000ns
@@ -229,25 +558,9 @@ Slack: 3.270ns (period - min period limit)
   Location pin: BUFGMUX_X2Y2.I0
   Clock network: BIT_CLK_BUFGP/IBUFG
 --------------------------------------------------------------------------------
-Slack: 4.000ns (period - min period limit)
-  Period: 5.000ns
-  Min period limit: 1.000ns (1000.000MHz) (Tcp)
-  Physical resource: LM4550_controler_1/SYNC_REGISTER1/CLK
-  Logical resource: LM4550_controler_1/Mshreg_SYNC_REGISTER/CLK
-  Location pin: SLICE_X52Y77.CLK
-  Clock network: BIT_CLK_BUFGP
---------------------------------------------------------------------------------
-Slack: 4.000ns (period - min period limit)
-  Period: 5.000ns
-  Min period limit: 1.000ns (1000.000MHz) (Tcp)
-  Physical resource: reset/CLK
-  Logical resource: Mshreg_reset/CLK
-  Location pin: SLICE_X52Y92.CLK
-  Clock network: BIT_CLK_BUFGP
---------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraint not met.
 
 
 Data Sheet report:
@@ -259,32 +572,32 @@ Clock to Setup on destination clock BIT_CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-BIT_CLK        |    4.388|    1.950|    2.451|    2.235|
+BIT_CLK        |   12.497|    2.011|    2.464|    2.102|
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+Timing errors: 211  Score: 697566  (Setup/Max: 697566, Hold: 0)
 
-Constraints cover 8097 paths, 0 nets, and 3476 connections
+Constraints cover 191570 paths, 0 nets, and 7510 connections
 
 Design statistics:
-   Minimum period:   4.902ns{1}   (Maximum frequency: 203.998MHz)
+   Minimum period:  12.497ns{1}   (Maximum frequency:  80.019MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Nov 11 16:39:29 2020 
+Analysis completed Sun Dec 20 16:50:50 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 216 MB
+Peak Memory Usage: 4667 MB
 
 
 

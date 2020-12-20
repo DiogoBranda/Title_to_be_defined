@@ -48,7 +48,7 @@ always @ (posedge clock)
 begin : FSM
     if (reset == 1'b1) begin // Quando reset
         for (i=0;i<64;i=i+1) begin
-                Mxin[i] = 18'h0; //Faz shift nos samples guardados.( O ultimo é eliminado)
+                Mxin[i]<= 18'h0; //Faz shift nos samples guardados.( O ultimo é eliminado)
         end
         Mread <=0;//  reset ao numero de samples guardados
         state <=  Wait_DIN_RDY; // Volta ao estado de espera
@@ -63,7 +63,7 @@ begin : FSM
         Wait_DIN_RDY :  if (endata ==1) begin //Neste estado fica a espera do sinal para ir ler
             //$display("Wait_DIN_RDY %h",Mxin[3]);
             for (i=63;i>0;i=i-1) begin
-                Mxin[i] = Mxin[i-1]; //Faz shift nos samples guardados.( O ultimo é eliminado)
+                Mxin[i] <= Mxin[i-1]; //Faz shift nos samples guardados.( O ultimo é eliminado)
             end
             Mxin[0] <= datain;// insere o novo sample no inicio
             if (Mread<63)begin
@@ -78,10 +78,10 @@ begin : FSM
         Read_Coef : if (cont< 63) begin// se o numero de amostras processadas for menor que as existentes entao faz
             //$display("Read_Coef %h",acom);
             coefaddress <= cont;// da endereço do coeficiente que quer ler. Tem de esperar um clock
-            state <=  #1  calculate_FIR;
+            state <=   calculate_FIR;
         end
         else begin// senao
-            state <=  #1  Wait_DIN_RDY;// ja fez tudo e volta para o estado inicial
+            state <= Wait_DIN_RDY;// ja fez tudo e volta para o estado inicial
             //$display("Read_Coef->Wait_DIN_RDY %h",acom);
         end
             
@@ -89,17 +89,17 @@ begin : FSM
             //$display("calculate_FIR",acom);
             acom <= acom + coefdata * Mxin[cont];    
             cont <= cont+1;//processou mais um
-            state <=  #1  Read_Coef;
+            state <=   Read_Coef;
         end
         else begin
-            state <=  #1  Wait_DIN_RDY;
+            state <=  Wait_DIN_RDY;
         end
         
         
        
 
 
-        default : state <=  #1  Wait_DIN_RDY;
+        default : state <=   Wait_DIN_RDY;
     endcase
 end
 

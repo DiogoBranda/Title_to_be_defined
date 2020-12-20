@@ -1,0 +1,13 @@
+[Inputs]
+clock
+reset
+endata
+=datain[17:0]=
+=coefdata[17:0]=
+[Outputs]
+=dataout[17:0]=
+=coefaddress[6:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel lowpass
+

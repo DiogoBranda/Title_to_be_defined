@@ -315,7 +315,7 @@ DPRAM #( .MEM_INIT_FILENAME("../simdata/FIR.hex") )
 	);
 
 // Sign extend to 32 bits the value read from memory:
-assign P7in[31:18] = {14{P7in[17]}};
+//assign P7in[31:18] = {14{P7in[17]}};
 
 
 //-------------------------------------------------------------------------------

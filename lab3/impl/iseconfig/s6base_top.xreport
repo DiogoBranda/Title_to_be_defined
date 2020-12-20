@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-12-04T19:34:27</DateModified>
+  <DateModified>2020-12-20T15:27:58</DateModified>
   <ModuleName>s6base_top</ModuleName>
-  <SummaryTimeStamp>2020-11-14T18:14:36</SummaryTimeStamp>
-  <SavedFilePath>C:/usr/jca/FEUP/FEUP/Aulas/2020-2021/Projeto_Sistemas_Digitais_2021/Labs/Lab23/lab3/impl/iseconfig/s6base_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/usr/jca/FEUP/FEUP/Aulas/2020-2021/Projeto_Sistemas_Digitais_2021/Labs/Lab23/lab3/impl\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2020-12-20T15:26:20</SummaryTimeStamp>
+  <SavedFilePath>C:/Git/Title_to_be_defined/lab3/impl/iseconfig/s6base_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Git/Title_to_be_defined/lab3/impl\</ImplementationReportsDirectory>
   <DateInitialized>2020-11-11T11:11:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -22,11 +22,234 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="psdlab3.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="lowpass.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="lowpass.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="lowpass.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="lowpass.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="lowpass.tfi"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="lowpass.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="psdi_dsp.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="psdi_dsp.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="psdi_dsp.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="psdi_dsp_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="s6base_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="s6base_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="s6base_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="s6base_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="s6base_tb_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="s6base_top.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="s6base_top.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="s6base_top.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="s6base_top.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="s6base_top.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="s6base_top.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="s6base_top.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="s6base_top.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="s6base_top.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="s6base_top.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="s6base_top.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="s6base_top.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="s6base_top.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="s6base_top.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="s6base_top.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="s6base_top.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="s6base_top.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="s6base_top.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="s6base_top.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="s6base_top_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="s6base_top_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="s6base_top_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="s6base_top_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="s6base_top_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="s6base_top_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="s6base_top_map.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="s6base_top_map_fpga_editor.log"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="s6base_top_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="s6base_top_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="s6base_top_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="s6base_top_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="s6base_top_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="s6base_top_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="s6base_top_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="s6base_top_xst.xrpt"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="uart_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1608474230" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1608474230">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608483347" xil_pn:in_ck="4675997802634713340" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1608483347">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../src/verilog-rtl/DPRAM.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/LM4550_controler.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/ioports16V2018.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/lowpass.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/psdi_dsp.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/s6base_top.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/uart.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/DPRAM_tb.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/LM4550_digital_sim.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/s6base_tb.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/uart_sim.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/verilog-tasks.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1608480162" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7048738208889177456" xil_pn:start_ts="1608480162">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608480162" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7417123215218913870" xil_pn:start_ts="1608480162">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608474230" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="326810151767194748" xil_pn:start_ts="1608474230">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608483347" xil_pn:in_ck="4675997802634713340" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1608483347">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../src/verilog-rtl/DPRAM.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/LM4550_controler.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/ioports16V2018.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/lowpass.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/psdi_dsp.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/s6base_top.v"/>
+      <outfile xil_pn:name="../src/verilog-rtl/uart.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/DPRAM_tb.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/LM4550_digital_sim.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/s6base_tb.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/uart_sim.v"/>
+      <outfile xil_pn:name="../src/verilog-tb/verilog-tasks.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1608483351" xil_pn:in_ck="4675997802634713340" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6698177274822684449" xil_pn:start_ts="1608483347">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="s6base_tb_beh.prj"/>
+      <outfile xil_pn:name="s6base_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1608483352" xil_pn:in_ck="610759861521700173" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4327401225029882782" xil_pn:start_ts="1608483351">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="s6base_tb_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473672" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1608473672">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473672" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1764074213113825525" xil_pn:start_ts="1608473672">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473672" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="326810151767194748" xil_pn:start_ts="1608473672">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473672" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1608473672">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473672" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2228777290654424691" xil_pn:start_ts="1608473672">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473672" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015756273942" xil_pn:start_ts="1608473672">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473672" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4884231006169545722" xil_pn:start_ts="1608473672">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608482877" xil_pn:in_ck="7918451512499309154" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2145385065685931936" xil_pn:start_ts="1608482850">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="s6base_top.lso"/>
+      <outfile xil_pn:name="s6base_top.ngc"/>
+      <outfile xil_pn:name="s6base_top.ngr"/>
+      <outfile xil_pn:name="s6base_top.prj"/>
+      <outfile xil_pn:name="s6base_top.stx"/>
+      <outfile xil_pn:name="s6base_top.syr"/>
+      <outfile xil_pn:name="s6base_top.xst"/>
+      <outfile xil_pn:name="s6base_top_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1608473687" xil_pn:in_ck="-8575876122720090149" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8767863086036536504" xil_pn:start_ts="1608473686">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608482886" xil_pn:in_ck="-6504137231115289641" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8452772707892923555" xil_pn:start_ts="1608482877">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="s6base_top.bld"/>
+      <outfile xil_pn:name="s6base_top.ngd"/>
+      <outfile xil_pn:name="s6base_top_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1608482973" xil_pn:in_ck="-6504137231115289640" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="4245753365082497697" xil_pn:start_ts="1608482886">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="s6base_top.pcf"/>
+      <outfile xil_pn:name="s6base_top_map.map"/>
+      <outfile xil_pn:name="s6base_top_map.mrp"/>
+      <outfile xil_pn:name="s6base_top_map.ncd"/>
+      <outfile xil_pn:name="s6base_top_map.ngm"/>
+      <outfile xil_pn:name="s6base_top_map.xrpt"/>
+      <outfile xil_pn:name="s6base_top_summary.xml"/>
+      <outfile xil_pn:name="s6base_top_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1608483051" xil_pn:in_ck="2424697818139195121" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1608482973">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="s6base_top.ncd"/>
+      <outfile xil_pn:name="s6base_top.pad"/>
+      <outfile xil_pn:name="s6base_top.par"/>
+      <outfile xil_pn:name="s6base_top.ptwx"/>
+      <outfile xil_pn:name="s6base_top.unroutes"/>
+      <outfile xil_pn:name="s6base_top.xpi"/>
+      <outfile xil_pn:name="s6base_top_pad.csv"/>
+      <outfile xil_pn:name="s6base_top_pad.txt"/>
+      <outfile xil_pn:name="s6base_top_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1608483051" xil_pn:in_ck="-6504137231115289772" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1608483041">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="s6base_top.twr"/>
+      <outfile xil_pn:name="s6base_top.twx"/>
+    </transform>
+  </transforms>
 
 </generated_project>
