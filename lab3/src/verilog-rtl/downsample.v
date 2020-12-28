@@ -1,13 +1,10 @@
 /*
-    Title: Block Downsample
-
-    University: FEUP MIEEC PSDi 2020/21
-
-    Date: 13/12/2020
-
-    Author: Joao Pereira (up201909554@fe.up.pt)
-
-    Brief Description:
+    
+	Authors: Diogo Silva(up201809213) & Joao Pereira(up201909554)
+	
+	University: FEUP - MIEEC - PSDi 2020/21
+	
+	Brief Description:
 
     This module receives a sequence of data samples at the sampling
     frequency of 48 kHz, synchronized by signal DIN_RDY, & reduces
@@ -22,46 +19,49 @@
 module downsample(
     input clock, // Master clock
     input reset, // master reset, synchronous, active high
-    input [3:0] Nfreq, // sampling rate divide factor
+    input [4:0] Nfreq, // sampling rate divide factor
     input [17:0] datain, // input data
     input endatain, // in clock enable, Fs=48kHz
     output [17:0] dataout, // output data
     output endataout // out clock enable, Fs = 48kHz/Nfreq
  );
 
-reg [17:0] data_aux, out_aux;
-reg [5:0] indice, indice_aux;
+reg [17:0] data_aux;
 reg endataout_aux;
-reg [5:0] cont ;
+//reg [5:0] cont ;
+reg signed [7:0] cont ;
 always @(posedge clock)
     begin
         
     if ( reset == 1'b1 )begin
-        cont <= 0;
+        //cont <= 0; //For FPGA
+		  cont <= -27; // Delay to wait for the right samples to arrive
         endataout_aux<=0;
         data_aux<=0;
     end
 
     else
     if ( endatain == 1'b1  ) begin
-        cont<=cont+1;    //register the inputs
+        
         
         if(cont==0) begin
-            data_aux<=datain;
-            endataout_aux<=1;
+            endataout_aux<=1'b1;
+				data_aux<=datain;
+				cont<=cont+4'd1;    //register the inputs
         end
 
-        if(cont>=Nfreq-1) begin
+        else if(cont == Nfreq-4'd1) begin
             cont<=0;
+				//data_aux<=datain;
         end
+		  else 
+				cont<=cont+4'd1;    //register the inputs
 
     end
     else 
        endataout_aux<=0;
 end
-/*always @(negedge clock) begin
-    endataout_aux<=0;
-end*/
+
 assign dataout = data_aux;
 assign endataout = endataout_aux;
 

@@ -24,6 +24,24 @@
 // will be loaded with the actual number of input samples read from the input audio files
 `define NSAMPLES_SIM   no_input_samples
 
+/*
+	Additional changes made:
+		
+	Fix golden_right & golden_left to correspond to expect output 
+	of the right & left side respectively
+	Update N_SAMPLES_LATENCY to work properly with modules in use
+	
+	
+	Note that: 
+	Depending of with modules are in use, aka value of mux,
+	may be necessary to adapt the value of N_SAMPLES_LATENCY
+	
+	by Diogo Silva(up201809213) & Joao Pereira(up20190954)
+
+*/
+
+
+
 
 module s6base_tb;
 
@@ -107,7 +125,7 @@ parameter
 		  XTAL_FREQUENCY     = 48000 * CLOCKS_PER_SAMPLE * 2, // 24.576 MHz
 		  XTAL_PERIOD_NS     = 1000000000.0/XTAL_FREQUENCY,   //clock period in ns
 		  
-		  N_SAMPLES_LATENCY     = 6, // Latency of the audio CODEC simulation model (# of sampling periods)
+		  N_SAMPLES_LATENCY     = 9, // Latency of the audio CODEC simulation model (# of sampling periods)
 		  
  		  N_CLOCKS_RESET  = 2;       // Number of clock cycles for applying reset
 
@@ -548,9 +566,9 @@ begin
   // Output data are available @ the posedge of the SYNC signal
   while ( 1 )
   begin
-    @(posedge SYNC);
-	 golden_left = golden_output_right[j]; // for exporting to the waveform window
-	 golden_right = golden_output_left[j]; // for exporting to the waveform window
+    @(posedge SYNC); // FOI ALTERADO RIGHT<-> LEFT
+	 golden_right = golden_output_right[j]; // for exporting to the waveform window
+	 golden_left = golden_output_left[j]; // for exporting to the waveform window
 	 
 	 if ( !( RIGHT_OUT == golden_output_right[j] && LEFT_OUT == golden_output_left[j] ) )
 	 begin

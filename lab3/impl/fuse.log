@@ -1,28 +1,32 @@
-Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Git/Title_to_be_defined/lab3/impl/s6base_tb_isim_beh.exe -prj C:/Git/Title_to_be_defined/lab3/impl/s6base_tb_beh.prj work.s6base_tb work.glbl 
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/s6base_tb_isim_beh.exe -prj C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/s6base_tb_beh.prj work.s6base_tb work.glbl 
 ISim P.68d (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/lowpass.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/uart.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/psdi_dsp.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/LM4550_controler.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/ioports16V2018.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/DPRAM.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-tb/uart_sim.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-tb/LM4550_digital_sim.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/s6base_top.v" into library work
-Analyzing Verilog file "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-tb/s6base_tb.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/requantize.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/lowpass.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/interpol.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/downsample.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/uart.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/psdi_dsp.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/LM4550_controler.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/ioports16V2018.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/DPRAM.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-tb/uart_sim.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-tb/LM4550_digital_sim.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-rtl/s6base_top.v" into library work
+Analyzing Verilog file "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/../src/verilog-tb/s6base_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/s6base_top.v" Line 314: Size mismatch in connection of port <dataout2>. Formal port size is 18-bit while actual signal size is 16-bit.
-WARNING:HDLCompiler:189 - "C:/Git/Title_to_be_defined/lab3/impl/../src/verilog-rtl/s6base_top.v" Line 331: Size mismatch in connection of port <RAM_coefs_dataout>. Formal port size is 18-bit while actual signal size is 16-bit.
 Completed static elaboration
 Compiling module uart(INPUT_CLOCK_FREQUENCY=12288...
 Compiling module ioports16V2018(INIT_P08=32'b0100...
 Compiling module LM4550_controler
 Compiling module DPRAM
 Compiling module lowpass
+Compiling module downsample
+Compiling module requantize
+Compiling module interpol
 Compiling module psdi_dsp
 Compiling module s6base_top
 Compiling module uart_sim(INPUT_CLOCK_FREQUENCY=1...
@@ -30,9 +34,8 @@ Compiling module LM4550_digital_sim
 Compiling module s6base_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 4 sub-compilation(s) to finish...
-WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: O sistema não conseguiu localizar o caminho especificado, "isim\s6base_tb_isim_beh.exe.sim\libPortability.dll".
-Compiled 11 Verilog Units
-Built simulation executable C:/Git/Title_to_be_defined/lab3/impl/s6base_tb_isim_beh.exe
-Fuse Memory Usage: 30768 KB
-Fuse CPU Usage: 781 ms
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 14 Verilog Units
+Built simulation executable C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/s6base_tb_isim_beh.exe
+Fuse Memory Usage: 30076 KB
+Fuse CPU Usage: 531 ms

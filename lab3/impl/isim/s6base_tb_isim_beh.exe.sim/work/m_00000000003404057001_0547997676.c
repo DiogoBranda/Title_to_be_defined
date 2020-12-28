@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Git/Title_to_be_defined/lab3/src/verilog-rtl/DPRAM.v";
+static const char *ng0 = "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/src/verilog-rtl/DPRAM.v";
 static int ng1[] = {778593656, 0, 793135442, 0, 1684108385, 0, 796092781, 0, 11822, 0};
 
 

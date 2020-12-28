@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-12-20T15:27:58</DateModified>
+  <DateModified>2020-12-23T19:27:14</DateModified>
   <ModuleName>s6base_top</ModuleName>
-  <SummaryTimeStamp>2020-12-20T15:26:20</SummaryTimeStamp>
-  <SavedFilePath>C:/Git/Title_to_be_defined/lab3/impl/iseconfig/s6base_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Git/Title_to_be_defined/lab3/impl\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2020-12-23T17:20:51</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/iseconfig/s6base_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl\</ImplementationReportsDirectory>
   <DateInitialized>2020-11-11T11:11:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
@@ -19,12 +19,12 @@
     <toc-item title="Detailed Reports" target="Detailed Reports" />
    </view>
    <view inputState="Unknown" program="implementation" contextTags="FPGA_ONLY" hidden="true" type="HTML" file="s6base_top_envsettings.html" label="System Settings" />
-   <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="s6base_top_map.xrpt" label="IOB Properties" />
+   <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="s6base_top_map.xrpt" showConstraints="0" label="IOB Properties" />
    <view inputState="Translated" program="map" contextTags="FPGA_ONLY" hidden="true" type="Control_Sets" file="s6base_top_map.xrpt" label="Control Set Information" />
    <view inputState="Translated" program="map" locator="MAP_MODULE_HIERARCHY" contextTags="FPGA_ONLY" type="Module_Utilization" file="s6base_top_map.xrpt" label="Module Level Utilization" />
-   <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="s6base_top.ptwx" label="Timing Constraints" translator="ptwxToTableXML.xslt" />
-   <view inputState="Mapped" program="par" locator="PAR_PINOUT_BY_PIN_NUMBER" contextTags="FPGA_ONLY" type="PinoutData" file="s6base_top_par.xrpt" label="Pinout Report" />
-   <view inputState="Mapped" program="par" locator="PAR_CLOCK_TABLE" contextTags="FPGA_ONLY" type="ClocksData" file="s6base_top_par.xrpt" label="Clock Report" />
+   <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="s6base_top.ptwx" showConstraints="0" label="Timing Constraints" translator="ptwxToTableXML.xslt" />
+   <view inputState="Mapped" program="par" locator="PAR_PINOUT_BY_PIN_NUMBER" contextTags="FPGA_ONLY" type="PinoutData" file="s6base_top_par.xrpt" showConstraints="0" label="Pinout Report" />
+   <view inputState="Mapped" program="par" locator="PAR_CLOCK_TABLE" contextTags="FPGA_ONLY" type="ClocksData" file="s6base_top_par.xrpt" showConstraints="0" label="Clock Report" />
    <view inputState="Mapped" program="par" contextTags="FPGA_ONLY,EDK_OFF" type="Timing_Analyzer" file="s6base_top.twx" label="Static Timing" />
    <view inputState="Translated" program="cpldfit" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="EXTERNAL_HTML" file="s6base_top_html/fit/report.htm" label="CPLD Fitter Report" />
    <view inputState="Fitted" program="taengine" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="EXTERNAL_HTML" file="s6base_top_html/tim/report.htm" label="CPLD Timing Report" />

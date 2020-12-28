@@ -1,3 +1,19 @@
+/*
+	Authors: Diogo Silva(up201809213) & Joao Pereira(up201909554)
+	
+	University: FEUP - MIEEC - PSDi 2020/21
+	
+	Brief Description:
+	
+	reduces the number of bits of the input samples to a smaller number M between 17
+	and 3 and scales the output to the 18 bit dynamic range to keep the output	samples 
+	represented in 18 bits. This module performs the following operation, where xk 
+	represents the input sample and yk is the	output sample: yk=round(xk/2^(m)*2^(m), 
+	note that m=(18-M), this atribution was done prior to this module
+
+*/
+
+
 module requantize(
     input clock, // Master clock
     input reset, // master reset, synchronous, active high
@@ -9,9 +25,9 @@ module requantize(
 
 reg [6:0] cont; // Numero de samples processados
 reg [17:0] temp;
-
-parameter SIZE = 5;
-parameter Wait_DIN_RDY  = 3'b001,TesteBit = 3'b010 ,Analise = 3'b011,Multiplica = 3'b100, R_UP=3'b101 ;
+reg [17:0] temp2;
+parameter SIZE = 2;
+parameter Wait_DIN_RDY  = 2'b00,TesteBit = 2'b01 ,Analise = 2'b10,Multiplica = 2'b11 ;
 reg   [SIZE-1:0] state;// Seq part of the FSM
 
 reg flag_1;
@@ -27,13 +43,16 @@ begin : FSM
        state <=  Wait_DIN_RDY;
        flag_1<=0;
        flag_up<=0;
+		 temp2<=0;
+		 temp<=0;
     end 
 
     else
 
     case(state)
         
-        Wait_DIN_RDY :  if (endatain ==1) begin //Neste estado fica a espera do sinal para ir ler
+        Wait_DIN_RDY :  
+		  if (endatain ==1) begin //Neste estado fica a espera do sinal para ir ler
             temp <=datain >> 1;
             cont<=cont+1;
             if(datain[0]==1)begin
@@ -84,9 +103,10 @@ begin : FSM
             cont<=0;
             flag_up<=0;
             state <=  Wait_DIN_RDY;
+				temp2<=temp;
         end
-        default : state <=  #1  Wait_DIN_RDY;
+        default : state <=   Wait_DIN_RDY;
     endcase
 end
-assign dataout=temp;
+assign dataout=temp2;
 endmodule

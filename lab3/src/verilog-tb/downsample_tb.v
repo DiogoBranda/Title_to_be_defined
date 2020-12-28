@@ -3,7 +3,7 @@ PSD 2020/21
 Lab 1 - Design and verification of a sequential non-restoring divider
 */
 `timescale 1ns/1ns
-`include "downsample.v"
+//`include "downsample.v"
 
 module downsample_tb;
   

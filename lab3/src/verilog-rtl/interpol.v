@@ -18,6 +18,19 @@
  
  */
  
+ /*
+	Additional changes made:
+	
+	Change input Nfreq to 5bits instead of 4bits to allow the correct
+	operation with values bigger or equal than 8. [2<=N=<10]
+	Otherwise operation: dataout_r <= accumout / $signed(Nfreq);
+	wouldn't work properly
+		
+	by Diogo Silva(up201809213) & Joao Pereira(up20190954)
+
+*/
+ 
+ 
 `timescale 1ns/1ps
 
 
@@ -27,7 +40,7 @@ module interpol
             input reset,    // master reset, assynchronous, active high
 				input endatain, // enable input data, low sampling frequency
 				input endataout,// output data enable, this should be the 48 kHz clock enable
-				input         [ 3:0]  Nfreq, // the interpolationm factor, this is the same as the downsample factor
+				input         [ 4:0]  Nfreq, // the interpolationm factor, this is the same as the downsample factor
 				input signed  [17:0] datain, // input data
 				output signed [17:0] dataout // output data
           );

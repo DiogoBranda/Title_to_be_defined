@@ -1,12 +1,7 @@
 ISim log file
-Running: C:\Git\Title_to_be_defined\lab3\impl\s6base_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Git/Title_to_be_defined/lab3/impl/s6base_tb_isim_beh.wdb 
+Running: C:\Users\up201909554\Desktop\Title_to_be_defined\lab3\impl\s6base_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/s6base_tb_isim_beh.wdb 
 ISim P.68d (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-WARNING: File "C:/Git/Title_to_be_defined/lab3/src/verilog-rtl/s6base_top.v" Line 298.  For instance s6base_top_1/RAM_coefs/, width 18 of formal port dataout2 is not equal to width 16 of actual signal dataout_coefs.
-WARNING: File "C:/Git/Title_to_be_defined/lab3/src/verilog-rtl/s6base_top.v" Line 298.  For instance s6base_top_1/psdi_dsp_1/, width 18 of formal port RAM_coefs_dataout is not equal to width 16 of actual signal dataout_coefs.
+This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
@@ -15,24 +10,24 @@ Simulator is doing circuit initialization process.
 Loading simulation input data from files ../simdata/audioin_left.hex, ../simdata/audioin_right.hex:
 Datain(0) [ left, right] = [0  , 0] (hex 00000  00000)
 Datain(1) [ left, right] = [-30  , -22] (hex 3ffe2  3ffea)
-Datain(2) [ left, right] = [496  , 384] (hex 001f0  00180)
-Datain(3) [ left, right] = [591  , 508] (hex 0024f  001fc)
+Datain(2) [ left, right] = [497  , 385] (hex 001f1  00181)
+Datain(3) [ left, right] = [592  , 508] (hex 00250  001fc)
 Datain(4) [ left, right] = [525  , 414] (hex 0020d  0019e)
-Datain(5) [ left, right] = [555  , 444] (hex 0022b  001bc)
-Datain(6) [ left, right] = [521  , 441] (hex 00209  001b9)
-Datain(7) [ left, right] = [581  , 438] (hex 00245  001b6)
-Datain(8) [ left, right] = [501  , 478] (hex 001f5  001de)
+Datain(5) [ left, right] = [555  , 445] (hex 0022b  001bd)
+Datain(6) [ left, right] = [521  , 440] (hex 00209  001b8)
+Datain(7) [ left, right] = [581  , 437] (hex 00245  001b5)
+Datain(8) [ left, right] = [502  , 477] (hex 001f6  001dd)
 Datain(9) [ left, right] = [558  , 451] (hex 0022e  001c3)
-Datain(10) [ left, right] = [543  , 453] (hex 0021f  001c5)
-Datain(11) [ left, right] = [538  , 468] (hex 0021a  001d4)
-Datain(12) [ left, right] = [535  , 423] (hex 00217  001a7)
+Datain(10) [ left, right] = [544  , 452] (hex 00220  001c4)
+Datain(11) [ left, right] = [537  , 468] (hex 00219  001d4)
+Datain(12) [ left, right] = [534  , 422] (hex 00216  001a6)
 Datain(13) [ left, right] = [546  , 506] (hex 00222  001fa)
-Datain(14) [ left, right] = [551  , 478] (hex 00227  001de)
+Datain(14) [ left, right] = [552  , 478] (hex 00228  001de)
 Datain(15) [ left, right] = [553  , 510] (hex 00229  001fe)
-Datain(16) [ left, right] = [558  , 513] (hex 0022e  00201)
-Datain(17) [ left, right] = [530  , 491] (hex 00212  001eb)
-Datain(18) [ left, right] = [593  , 451] (hex 00251  001c3)
-Datain(19) [ left, right] = [560  , 459] (hex 00230  001cb)
+Datain(16) [ left, right] = [559  , 513] (hex 0022f  00201)
+Datain(17) [ left, right] = [529  , 491] (hex 00211  001eb)
+Datain(18) [ left, right] = [594  , 451] (hex 00252  001c3)
+Datain(19) [ left, right] = [560  , 460] (hex 00230  001cc)
 -----------------------------------------------
 Read        4800 samples from input files
 
@@ -53,21 +48,88 @@ golden data out(11) = 0 (hex 00000 )
 golden data out(12) = 0 (hex 00000 )
 golden data out(13) = 0 (hex 00000 )
 golden data out(14) = 0 (hex 00000 )
-golden data out(15) = 1 (hex 00001 )
-golden data out(16) = 2 (hex 00002 )
-golden data out(17) = 3 (hex 00003 )
-golden data out(18) = 4 (hex 00004 )
-golden data out(19) = 2 (hex 00002 )
+golden data out(15) = 0 (hex 00000 )
+golden data out(16) = 0 (hex 00000 )
+golden data out(17) = 0 (hex 00000 )
+golden data out(18) = 0 (hex 00000 )
+golden data out(19) = 0 (hex 00000 )
 -----------------------------------------------
 Read        4800 samples from golden output file
 
 -----------------------------------------------
 Finished circuit initialization process.
 [time=     0.229 us] Reset released, programming parameters...
+# restart
 # run all
+Simulator is doing circuit initialization process.
+Loading simulation input data from files ../simdata/audioin_left.hex, ../simdata/audioin_right.hex:
+Datain(0) [ left, right] = [0  , 0] (hex 00000  00000)
+Datain(1) [ left, right] = [-30  , -22] (hex 3ffe2  3ffea)
+Datain(2) [ left, right] = [497  , 385] (hex 001f1  00181)
+Datain(3) [ left, right] = [592  , 508] (hex 00250  001fc)
+Datain(4) [ left, right] = [525  , 414] (hex 0020d  0019e)
+Datain(5) [ left, right] = [555  , 445] (hex 0022b  001bd)
+Datain(6) [ left, right] = [521  , 440] (hex 00209  001b8)
+Datain(7) [ left, right] = [581  , 437] (hex 00245  001b5)
+Datain(8) [ left, right] = [502  , 477] (hex 001f6  001dd)
+Datain(9) [ left, right] = [558  , 451] (hex 0022e  001c3)
+Datain(10) [ left, right] = [544  , 452] (hex 00220  001c4)
+Datain(11) [ left, right] = [537  , 468] (hex 00219  001d4)
+Datain(12) [ left, right] = [534  , 422] (hex 00216  001a6)
+Datain(13) [ left, right] = [546  , 506] (hex 00222  001fa)
+Datain(14) [ left, right] = [552  , 478] (hex 00228  001de)
+Datain(15) [ left, right] = [553  , 510] (hex 00229  001fe)
+Datain(16) [ left, right] = [559  , 513] (hex 0022f  00201)
+Datain(17) [ left, right] = [529  , 491] (hex 00211  001eb)
+Datain(18) [ left, right] = [594  , 451] (hex 00252  001c3)
+Datain(19) [ left, right] = [560  , 460] (hex 00230  001cc)
+-----------------------------------------------
+Read        4800 samples from input files
+
+-----------------------------------------------
+Loading the golden output data from files ../simdata/output_left_golden.hex and ../simdata/output_right_golden.hex:
+golden data out(0) = 0 (hex 00000 )
+golden data out(1) = 0 (hex 00000 )
+golden data out(2) = 0 (hex 00000 )
+golden data out(3) = 0 (hex 00000 )
+golden data out(4) = 0 (hex 00000 )
+golden data out(5) = 0 (hex 00000 )
+golden data out(6) = 0 (hex 00000 )
+golden data out(7) = 0 (hex 00000 )
+golden data out(8) = 0 (hex 00000 )
+golden data out(9) = 0 (hex 00000 )
+golden data out(10) = 0 (hex 00000 )
+golden data out(11) = 0 (hex 00000 )
+golden data out(12) = 0 (hex 00000 )
+golden data out(13) = 0 (hex 00000 )
+golden data out(14) = 0 (hex 00000 )
+golden data out(15) = 0 (hex 00000 )
+golden data out(16) = 0 (hex 00000 )
+golden data out(17) = 0 (hex 00000 )
+golden data out(18) = 0 (hex 00000 )
+golden data out(19) = 0 (hex 00000 )
+-----------------------------------------------
+Read        4800 samples from golden output file
+
+-----------------------------------------------
+Finished circuit initialization process.
+[time=     0.229 us] Reset released, programming parameters...
 [time=   479.759 us] Applying input samples...
 Starting the verification process.vv..
 done           0 samples.
+Error: expected LEFT:      -7, read      -6 || RIGHT:      -4, read      -3.
+Error: expected LEFT:     -13, read     -12 || RIGHT:      -7, read      -6.
+Error: expected LEFT:     -20, read     -19 || RIGHT:     -10, read      -9.
+Error: expected LEFT:     -26, read     -25 || RIGHT:     -13, read     -12.
+Error: expected LEFT:     -39, read     -38 || RIGHT:     -20, read     -19.
+Error: expected LEFT:     -45, read     -44 || RIGHT:     -23, read     -22.
+Error: expected LEFT:     -52, read     -51 || RIGHT:     -26, read     -25.
+Error: expected LEFT:     -58, read     -57 || RIGHT:     -29, read     -28.
+Error: expected LEFT:      -4, read      -3 || RIGHT:      16, read      16.
+Error: expected LEFT:      57, read      57 || RIGHT:      63, read      64.
+Error: expected LEFT:     179, read     179 || RIGHT:     159, read     160.
+Error: expected LEFT:     361, read     361 || RIGHT:     303, read     304.
+Error: expected LEFT:     483, read     483 || RIGHT:     399, read     400.
 done         100 samples.
 done         200 samples.
 done         300 samples.
@@ -75,55 +137,438 @@ done         400 samples.
 done         500 samples.
 done         600 samples.
 done         700 samples.
+Error: expected LEFT:     729, read     729 || RIGHT:     607, read     608.
+Error: expected LEFT:     723, read     723 || RIGHT:     639, read     640.
+Error: expected LEFT:     713, read     713 || RIGHT:     687, read     688.
+Error: expected LEFT:     707, read     707 || RIGHT:     719, read     720.
 done         800 samples.
+Error: expected LEFT:     483, read     483 || RIGHT:     927, read     928.
+Error: expected LEFT:     489, read     489 || RIGHT:     863, read     864.
+Error: expected LEFT:     499, read     499 || RIGHT:     767, read     768.
+Error: expected LEFT:     505, read     505 || RIGHT:     703, read     704.
+Error: expected LEFT:     495, read     496 || RIGHT:     681, read     681.
+Error: expected LEFT:     463, read     464 || RIGHT:     764, read     764.
+Error: expected LEFT:     415, read     416 || RIGHT:     889, read     889.
+Error: expected LEFT:     383, read     384 || RIGHT:     972, read     972.
+Error: expected LEFT:     387, read     387 || RIGHT:    1039, read    1040.
+Error: expected LEFT:     457, read     457 || RIGHT:    1007, read    1008.
+Error: expected LEFT:     563, read     563 || RIGHT:     959, read     960.
+Error: expected LEFT:     633, read     633 || RIGHT:     927, read     928.
+Error: expected LEFT:     767, read     768 || RIGHT:     883, read     883.
 done         900 samples.
+Error: expected LEFT:     831, read     832 || RIGHT:     870, read     870.
+Error: expected LEFT:     927, read     928 || RIGHT:     851, read     851.
+Error: expected LEFT:     991, read     992 || RIGHT:     838, read     838.
+Error: expected LEFT:     639, read     640 || RIGHT:    1369, read    1369.
+Error: expected LEFT:     703, read     704 || RIGHT:    1427, read    1427.
+Error: expected LEFT:     799, read     800 || RIGHT:    1513, read    1513.
+Error: expected LEFT:     863, read     864 || RIGHT:    1571, read    1571.
+Error: expected LEFT:     863, read     864 || RIGHT:    1609, read    1609.
+Error: expected LEFT:     799, read     800 || RIGHT:    1628, read    1628.
+Error: expected LEFT:     703, read     704 || RIGHT:    1657, read    1657.
+Error: expected LEFT:     639, read     640 || RIGHT:    1676, read    1676.
+Error: expected LEFT:     889, read     889 || RIGHT:    1951, read    1952.
+Error: expected LEFT:    1267, read    1267 || RIGHT:    2079, read    2080.
+Error: expected LEFT:    1833, read    1833 || RIGHT:    2271, read    2272.
+Error: expected LEFT:    2211, read    2211 || RIGHT:    2399, read    2400.
+Error: expected LEFT:    2246, read    2246 || RIGHT:    2223, read    2224.
+Error: expected LEFT:    1939, read    1939 || RIGHT:    1743, read    1744.
+Error: expected LEFT:    1478, read    1478 || RIGHT:    1023, read    1024.
+Error: expected LEFT:    1171, read    1171 || RIGHT:     543, read     544.
+Error: expected LEFT:     796, read     796 || RIGHT:    -433, read    -432.
+Error: expected LEFT:     662, read     662 || RIGHT:   -1425, read   -1424.
+Error: expected LEFT:     460, read     460 || RIGHT:   -2913, read   -2912.
+Error: expected LEFT:     326, read     326 || RIGHT:   -3905, read   -3904.
+Error: expected LEFT:       9, read       9 || RIGHT:   -4541, read   -4540.
+Error: expected LEFT:    -173, read    -172 || RIGHT:   -4186, read   -4185.
+Error: expected LEFT:    -356, read    -355 || RIGHT:   -3831, read   -3830.
 done        1000 samples.
+Error: expected LEFT:    -538, read    -537 || RIGHT:   -3476, read   -3475.
+Error: expected LEFT:    -903, read    -902 || RIGHT:   -2765, read   -2764.
+Error: expected LEFT:   -1085, read   -1084 || RIGHT:   -2410, read   -2409.
+Error: expected LEFT:   -1268, read   -1267 || RIGHT:   -2055, read   -2054.
+Error: expected LEFT:   -1450, read   -1449 || RIGHT:   -1700, read   -1699.
+Error: expected LEFT:   -2167, read   -2166 || RIGHT:   -1511, read   -1510.
+Error: expected LEFT:   -2701, read   -2700 || RIGHT:   -1677, read   -1676.
+Error: expected LEFT:   -3236, read   -3235 || RIGHT:   -1844, read   -1843.
+Error: expected LEFT:   -3770, read   -3769 || RIGHT:   -2010, read   -2009.
+Error: expected LEFT:   -4839, read   -4838 || RIGHT:   -2343, read   -2342.
+Error: expected LEFT:   -5373, read   -5372 || RIGHT:   -2509, read   -2508.
+Error: expected LEFT:   -5908, read   -5907 || RIGHT:   -2676, read   -2675.
+Error: expected LEFT:   -6442, read   -6441 || RIGHT:   -2842, read   -2841.
+Error: expected LEFT:   -6461, read   -6460 || RIGHT:   -2276, read   -2275.
+Error: expected LEFT:   -5946, read   -5945 || RIGHT:   -1543, read   -1542.
+Error: expected LEFT:   -5431, read   -5430 || RIGHT:    -810, read    -809.
+Error: expected LEFT:   -4916, read   -4915 || RIGHT:     -77, read     -76.
+Error: expected LEFT:   -3885, read   -3884 || RIGHT:    1388, read    1388.
+Error: expected LEFT:   -3370, read   -3369 || RIGHT:    2121, read    2121.
+Error: expected LEFT:   -2855, read   -2854 || RIGHT:    2854, read    2854.
+Error: expected LEFT:   -2340, read   -2339 || RIGHT:    3587, read    3587.
+Error: expected LEFT:    -897, read    -896 || RIGHT:    3852, read    3852.
+Error: expected LEFT:      31, read      32 || RIGHT:    3385, read    3385.
+Error: expected LEFT:    1423, read    1424 || RIGHT:    2684, read    2684.
+Error: expected LEFT:    2351, read    2352 || RIGHT:    2217, read    2217.
+Error: expected LEFT:    5427, read    5427 || RIGHT:    -180, read    -179.
+Error: expected LEFT:    5292, read    5292 || RIGHT:    -653, read    -652.
+Error: expected LEFT:    5225, read    5225 || RIGHT:    -890, read    -889.
+Error: expected LEFT:    5158, read    5158 || RIGHT:   -1127, read   -1126.
+Error: expected LEFT:    5091, read    5091 || RIGHT:   -1364, read   -1363.
+Error: expected LEFT:    3875, read    3875 || RIGHT:   -1828, read   -1827.
+Error: expected LEFT:    2726, read    2726 || RIGHT:   -2055, read   -2054.
+Error: expected LEFT:    1577, read    1577 || RIGHT:   -2282, read   -2281.
+Error: expected LEFT:     428, read     428 || RIGHT:   -2509, read   -2508.
+Error: expected LEFT:   -1869, read   -1868 || RIGHT:   -2964, read   -2963.
+Error: expected LEFT:   -3018, read   -3017 || RIGHT:   -3191, read   -3190.
+Error: expected LEFT:   -4167, read   -4166 || RIGHT:   -3418, read   -3417.
+Error: expected LEFT:   -5316, read   -5315 || RIGHT:   -3645, read   -3644.
+Error: expected LEFT:   -6461, read   -6460 || RIGHT:   -4167, read   -4166.
+Error: expected LEFT:   -6458, read   -6457 || RIGHT:   -4461, read   -4460.
+Error: expected LEFT:   -6455, read   -6454 || RIGHT:   -4756, read   -4755.
 done        1100 samples.
+Error: expected LEFT:   -6452, read   -6451 || RIGHT:   -5050, read   -5049.
+Error: expected LEFT:   -6445, read   -6444 || RIGHT:   -5639, read   -5638.
+Error: expected LEFT:   -6442, read   -6441 || RIGHT:   -5933, read   -5932.
+Error: expected LEFT:   -6439, read   -6438 || RIGHT:   -6228, read   -6227.
+Error: expected LEFT:   -6436, read   -6435 || RIGHT:   -6522, read   -6521.
+Error: expected LEFT:   -6615, read   -6614 || RIGHT:   -6624, read   -6624.
+Error: expected LEFT:   -6797, read   -6796 || RIGHT:   -6433, read   -6432.
+Error: expected LEFT:   -6980, read   -6979 || RIGHT:   -6240, read   -6240.
+Error: expected LEFT:   -7162, read   -7161 || RIGHT:   -6049, read   -6048.
+Error: expected LEFT:   -7527, read   -7526 || RIGHT:   -5664, read   -5664.
+Error: expected LEFT:   -7709, read   -7708 || RIGHT:   -5473, read   -5472.
+Error: expected LEFT:   -7892, read   -7891 || RIGHT:   -5280, read   -5280.
+Error: expected LEFT:   -8074, read   -8073 || RIGHT:   -5089, read   -5088.
+Error: expected LEFT:   -7869, read   -7868 || RIGHT:   -4016, read   -4016.
+Error: expected LEFT:   -7482, read   -7481 || RIGHT:   -3137, read   -3136.
+Error: expected LEFT:   -7095, read   -7094 || RIGHT:   -2256, read   -2256.
+Error: expected LEFT:   -6708, read   -6707 || RIGHT:   -1377, read   -1376.
+Error: expected LEFT:   -5933, read   -5932 || RIGHT:     384, read     384.
+Error: expected LEFT:   -5546, read   -5545 || RIGHT:    1263, read    1264.
+Error: expected LEFT:   -5159, read   -5158 || RIGHT:    2144, read    2144.
+Error: expected LEFT:   -4772, read   -4771 || RIGHT:    3023, read    3024.
+Error: expected LEFT:   -3620, read   -3619 || RIGHT:    3929, read    3929.
+Error: expected LEFT:   -2855, read   -2854 || RIGHT:    3955, read    3955.
+Error: expected LEFT:   -2090, read   -2089 || RIGHT:    3980, read    3980.
+Error: expected LEFT:   -1325, read   -1324 || RIGHT:    4006, read    4006.
+Error: expected LEFT:    7286, read    7286 || RIGHT:   -1271, read   -1270.
+Error: expected LEFT:    6540, read    6540 || RIGHT:   -1517, read   -1516.
+Error: expected LEFT:    5795, read    5795 || RIGHT:   -1764, read   -1763.
+Error: expected LEFT:    5049, read    5049 || RIGHT:   -2010, read   -2009.
+Error: expected LEFT:    3558, read    3558 || RIGHT:   -2503, read   -2502.
+Error: expected LEFT:    2812, read    2812 || RIGHT:   -2749, read   -2748.
+Error: expected LEFT:    2067, read    2067 || RIGHT:   -2996, read   -2995.
+Error: expected LEFT:    1321, read    1321 || RIGHT:   -3242, read   -3241.
+Error: expected LEFT:    -429, read    -428 || RIGHT:   -4010, read   -4009.
+Error: expected LEFT:   -1434, read   -1433 || RIGHT:   -4532, read   -4531.
+Error: expected LEFT:   -2439, read   -2438 || RIGHT:   -5053, read   -5052.
+Error: expected LEFT:   -3444, read   -3443 || RIGHT:   -5575, read   -5574.
+Error: expected LEFT:   -5453, read   -5452 || RIGHT:   -6618, read   -6617.
+Error: expected LEFT:   -6458, read   -6457 || RIGHT:   -7140, read   -7139.
+Error: expected LEFT:   -7463, read   -7462 || RIGHT:   -7661, read   -7660.
+Error: expected LEFT:   -8468, read   -8467 || RIGHT:   -8183, read   -8182.
+Error: expected LEFT:  -10010, read  -10009 || RIGHT:   -8740, read   -8739.
+Error: expected LEFT:  -10548, read  -10547 || RIGHT:   -8775, read   -8774.
+Error: expected LEFT:  -11085, read  -11084 || RIGHT:   -8810, read   -8809.
 done        1200 samples.
+Error: expected LEFT:  -11623, read  -11622 || RIGHT:   -8845, read   -8844.
+Error: expected LEFT:  -12698, read  -12697 || RIGHT:   -8916, read   -8915.
+Error: expected LEFT:  -13236, read  -13235 || RIGHT:   -8951, read   -8950.
+Error: expected LEFT:  -13773, read  -13772 || RIGHT:   -8986, read   -8985.
+Error: expected LEFT:  -14311, read  -14310 || RIGHT:   -9021, read   -9020.
+Error: expected LEFT:  -14154, read  -14153 || RIGHT:   -7706, read   -7705.
+Error: expected LEFT:  -13460, read  -13459 || RIGHT:   -6356, read   -6355.
+Error: expected LEFT:  -12765, read  -12764 || RIGHT:   -5005, read   -5004.
+Error: expected LEFT:  -12071, read  -12070 || RIGHT:   -3655, read   -3654.
+Error: expected LEFT:  -10682, read  -10681 || RIGHT:    -954, read    -953.
+Error: expected LEFT:   -9988, read   -9987 || RIGHT:     396, read     396.
+Error: expected LEFT:   -9293, read   -9292 || RIGHT:    1747, read    1747.
+Error: expected LEFT:   -8599, read   -8598 || RIGHT:    3097, read    3097.
+Error: expected LEFT:   -7213, read   -7212 || RIGHT:    4569, read    4569.
+Error: expected LEFT:   -6522, read   -6521 || RIGHT:    4691, read    4691.
+Error: expected LEFT:   -5831, read   -5830 || RIGHT:    4812, read    4812.
+Error: expected LEFT:   -5140, read   -5139 || RIGHT:    4934, read    4934.
+Error: expected LEFT:   -3757, read   -3756 || RIGHT:    5177, read    5177.
+Error: expected LEFT:   -3066, read   -3065 || RIGHT:    5299, read    5299.
+Error: expected LEFT:   -2375, read   -2374 || RIGHT:    5420, read    5420.
+Error: expected LEFT:   -1684, read   -1683 || RIGHT:    5542, read    5542.
+Error: expected LEFT:    1100, read    1100 || RIGHT:    5887, read    5888.
+Error: expected LEFT:    3193, read    3193 || RIGHT:    6111, read    6112.
+Error: expected LEFT:    6332, read    6332 || RIGHT:    6447, read    6448.
+Error: expected LEFT:    8425, read    8425 || RIGHT:    6671, read    6672.
+Error: expected LEFT:    9478, read    9478 || RIGHT:    6415, read    6416.
+Error: expected LEFT:    9491, read    9491 || RIGHT:    5679, read    5680.
+Error: expected LEFT:    9510, read    9510 || RIGHT:    4575, read    4576.
+Error: expected LEFT:    9523, read    9523 || RIGHT:    3839, read    3840.
+Error: expected LEFT:    7487, read    7488 || RIGHT:    4483, read    4483.
+Error: expected LEFT:    6655, read    6656 || RIGHT:    2057, read    2057.
+Error: expected LEFT:    5407, read    5408 || RIGHT:   -1581, read   -1580.
+Error: expected LEFT:    4992, read    4992 || RIGHT:   -2794, read   -2793.
+Error: expected LEFT:    4575, read    4576 || RIGHT:   -4007, read   -4006.
+Error: expected LEFT:    4160, read    4160 || RIGHT:   -5220, read   -5219.
+Error: expected LEFT:    3116, read    3116 || RIGHT:   -6327, read   -6326.
+Error: expected LEFT:    2489, read    2489 || RIGHT:   -6221, read   -6220.
+Error: expected LEFT:    1862, read    1862 || RIGHT:   -6116, read   -6115.
+Error: expected LEFT:    1235, read    1235 || RIGHT:   -6010, read   -6009.
+Error: expected LEFT:     -20, read     -19 || RIGHT:   -5799, read   -5798.
+Error: expected LEFT:    -647, read    -646 || RIGHT:   -5693, read   -5692.
+Error: expected LEFT:   -1274, read   -1273 || RIGHT:   -5588, read   -5587.
+Error: expected LEFT:   -1901, read   -1900 || RIGHT:   -5482, read   -5481.
+Error: expected LEFT:   -3482, read   -3481 || RIGHT:   -5453, read   -5452.
+Error: expected LEFT:   -4436, read   -4435 || RIGHT:   -5530, read   -5529.
+Error: expected LEFT:   -5389, read   -5388 || RIGHT:   -5607, read   -5606.
+Error: expected LEFT:   -6343, read   -6342 || RIGHT:   -5684, read   -5683.
+Error: expected LEFT:   -8250, read   -8249 || RIGHT:   -5837, read   -5836.
+Error: expected LEFT:   -9204, read   -9203 || RIGHT:   -5914, read   -5913.
+Error: expected LEFT:  -10157, read  -10156 || RIGHT:   -5991, read   -5990.
+Error: expected LEFT:  -11111, read  -11110 || RIGHT:   -6068, read   -6067.
+Error: expected LEFT:  -11104, read  -11104 || RIGHT:   -5700, read   -5699.
+Error: expected LEFT:  -10145, read  -10144 || RIGHT:   -5255, read   -5254.
+Error: expected LEFT:   -9184, read   -9184 || RIGHT:   -4810, read   -4809.
 done        1300 samples.
+Error: expected LEFT:   -8225, read   -8224 || RIGHT:   -4365, read   -4364.
+Error: expected LEFT:   -6304, read   -6304 || RIGHT:   -3476, read   -3475.
+Error: expected LEFT:   -5345, read   -5344 || RIGHT:   -3031, read   -3030.
+Error: expected LEFT:   -4384, read   -4384 || RIGHT:   -2586, read   -2585.
+Error: expected LEFT:   -3425, read   -3424 || RIGHT:   -2141, read   -2140.
+Error: expected LEFT:   -2826, read   -2825 || RIGHT:   -1162, read   -1161.
+Error: expected LEFT:   -3188, read   -3187 || RIGHT:    -628, read    -627.
+Error: expected LEFT:   -3549, read   -3548 || RIGHT:     -93, read     -92.
+Error: expected LEFT:   -3911, read   -3910 || RIGHT:     441, read     441.
+Error: expected LEFT:   -4634, read   -4633 || RIGHT:    1510, read    1510.
+Error: expected LEFT:   -4996, read   -4995 || RIGHT:    2044, read    2044.
+Error: expected LEFT:   -5357, read   -5356 || RIGHT:    2579, read    2579.
+Error: expected LEFT:   -5719, read   -5718 || RIGHT:    3113, read    3113.
+Error: expected LEFT:   -5706, read   -5705 || RIGHT:    3817, read    3817.
+Error: expected LEFT:   -5332, read   -5331 || RIGHT:    3987, read    3987.
+Error: expected LEFT:   -4957, read   -4956 || RIGHT:    4156, read    4156.
+Error: expected LEFT:   -4583, read   -4582 || RIGHT:    4326, read    4326.
+Error: expected LEFT:   -3834, read   -3833 || RIGHT:    4665, read    4665.
+Error: expected LEFT:   -3460, read   -3459 || RIGHT:    4835, read    4835.
+Error: expected LEFT:   -3085, read   -3084 || RIGHT:    5004, read    5004.
+Error: expected LEFT:   -2711, read   -2710 || RIGHT:    5174, read    5174.
+Error: expected LEFT:   -1405, read   -1404 || RIGHT:    5321, read    5321.
+Error: expected LEFT:    -474, read    -473 || RIGHT:    5299, read    5299.
+Error: expected LEFT:   10140, read   10140 || RIGHT:    5695, read    5696.
+Error: expected LEFT:    8854, read    8854 || RIGHT:    5183, read    5184.
+Error: expected LEFT:    6924, read    6924 || RIGHT:    4415, read    4416.
+Error: expected LEFT:    5638, read    5638 || RIGHT:    3903, read    3904.
+Error: expected LEFT:    5183, read    5184 || RIGHT:    2342, read    2342.
+Error: expected LEFT:    6015, read    6016 || RIGHT:    1292, read    1292.
+Error: expected LEFT:    7263, read    7264 || RIGHT:    -282, read    -281.
+Error: expected LEFT:    7680, read    7680 || RIGHT:    -807, read    -806.
+Error: expected LEFT:    8095, read    8096 || RIGHT:   -1332, read   -1331.
+Error: expected LEFT:    7519, read    7520 || RIGHT:   -2122, read   -2121.
+Error: expected LEFT:    6528, read    6528 || RIGHT:   -2388, read   -2387.
+Error: expected LEFT:    5535, read    5536 || RIGHT:   -2653, read   -2652.
+Error: expected LEFT:    4544, read    4544 || RIGHT:   -2919, read   -2918.
+Error: expected LEFT:    2559, read    2560 || RIGHT:   -3450, read   -3449.
+Error: expected LEFT:    1568, read    1568 || RIGHT:   -3716, read   -3715.
+Error: expected LEFT:     575, read     576 || RIGHT:   -3981, read   -3980.
+Error: expected LEFT:    -416, read    -416 || RIGHT:   -4247, read   -4246.
+Error: expected LEFT:   -2305, read   -2304 || RIGHT:   -4439, read   -4438.
+Error: expected LEFT:   -3200, read   -3200 || RIGHT:   -4365, read   -4364.
+Error: expected LEFT:   -4097, read   -4096 || RIGHT:   -4292, read   -4291.
+Error: expected LEFT:   -4992, read   -4992 || RIGHT:   -4218, read   -4217.
+Error: expected LEFT:   -6785, read   -6784 || RIGHT:   -4071, read   -4070.
+Error: expected LEFT:   -7680, read   -7680 || RIGHT:   -3997, read   -3996.
+Error: expected LEFT:   -8577, read   -8576 || RIGHT:   -3924, read   -3923.
+Error: expected LEFT:   -9472, read   -9472 || RIGHT:   -3850, read   -3849.
+Error: expected LEFT:   -9226, read   -9225 || RIGHT:   -4477, read   -4476.
+Error: expected LEFT:   -8084, read   -8083 || RIGHT:   -5178, read   -5177.
+Error: expected LEFT:   -6941, read   -6940 || RIGHT:   -5879, read   -5878.
+Error: expected LEFT:   -5799, read   -5798 || RIGHT:   -6580, read   -6579.
+Error: expected LEFT:   -3514, read   -3513 || RIGHT:   -7981, read   -7980.
+Error: expected LEFT:   -2372, read   -2371 || RIGHT:   -8682, read   -8681.
+Error: expected LEFT:   -1229, read   -1228 || RIGHT:   -9383, read   -9382.
+Error: expected LEFT:     -87, read     -86 || RIGHT:  -10084, read  -10083.
+Error: expected LEFT:     854, read     854 || RIGHT:   -9917, read   -9916.
+Error: expected LEFT:     652, read     652 || RIGHT:   -9050, read   -9049.
+Error: expected LEFT:     451, read     451 || RIGHT:   -8183, read   -8182.
 done        1400 samples.
+Error: expected LEFT:     249, read     249 || RIGHT:   -7316, read   -7315.
+Error: expected LEFT:    -154, read    -153 || RIGHT:   -5581, read   -5580.
+Error: expected LEFT:    -356, read    -355 || RIGHT:   -4714, read   -4713.
+Error: expected LEFT:    -557, read    -556 || RIGHT:   -3847, read   -3846.
+Error: expected LEFT:    -759, read    -758 || RIGHT:   -2980, read   -2979.
+Error: expected LEFT:   -2385, read   -2384 || RIGHT:   -2445, read   -2444.
+Error: expected LEFT:   -3808, read   -3808 || RIGHT:   -2778, read   -2777.
+Error: expected LEFT:   -5233, read   -5232 || RIGHT:   -3111, read   -3110.
+Error: expected LEFT:   -6656, read   -6656 || RIGHT:   -3444, read   -3443.
+Error: expected LEFT:   -9505, read   -9504 || RIGHT:   -4109, read   -4108.
+Error: expected LEFT:  -10928, read  -10928 || RIGHT:   -4442, read   -4441.
+Error: expected LEFT:  -12353, read  -12352 || RIGHT:   -4775, read   -4774.
+Error: expected LEFT:  -13776, read  -13776 || RIGHT:   -5108, read   -5107.
+Error: expected LEFT:  -14135, read  -14134 || RIGHT:   -4061, read   -4060.
+Error: expected LEFT:  -13069, read  -13068 || RIGHT:   -2682, read   -2681.
+Error: expected LEFT:  -12004, read  -12003 || RIGHT:   -1303, read   -1302.
+Error: expected LEFT:  -10938, read  -10937 || RIGHT:      76, read      76.
+Error: expected LEFT:   -8807, read   -8806 || RIGHT:    2835, read    2835.
+Error: expected LEFT:   -7741, read   -7740 || RIGHT:    4214, read    4214.
+Error: expected LEFT:   -6676, read   -6675 || RIGHT:    5593, read    5593.
+Error: expected LEFT:   -5610, read   -5609 || RIGHT:    6972, read    6972.
+Error: expected LEFT:   -3639, read   -3638 || RIGHT:    7174, read    7174.
+Error: expected LEFT:   -2733, read   -2732 || RIGHT:    5996, read    5996.
+Error: expected LEFT:   -1828, read   -1827 || RIGHT:    4819, read    4819.
+Error: expected LEFT:    -922, read    -921 || RIGHT:    3641, read    3641.
+Error: expected LEFT:    2700, read    2700 || RIGHT:   -1069, read   -1068.
+Error: expected LEFT:    3606, read    3606 || RIGHT:   -2247, read   -2246.
+Error: expected LEFT:    5132, read    5132 || RIGHT:   -2522, read   -2521.
+Error: expected LEFT:    5753, read    5753 || RIGHT:   -1620, read   -1619.
+Error: expected LEFT:    6374, read    6374 || RIGHT:    -717, read    -716.
+Error: expected LEFT:    -746, read    -745 || RIGHT:   13446, read   13446.
+Error: expected LEFT:   15907, read   15907 || RIGHT:   -1268, read   -1267.
+Error: expected LEFT:   15804, read   15804 || RIGHT:   -1668, read   -1667.
+Error: expected LEFT:   13721, read   13721 || RIGHT:    -359, read    -358.
+Error: expected LEFT:    -861, read    -860 || RIGHT:    8803, read    8803.
+Error: expected LEFT:   -2765, read   -2764 || RIGHT:    8847, read    8848.
+Error: expected LEFT:   -2586, read   -2585 || RIGHT:    7584, read    7584.
+Error: expected LEFT:   -2407, read   -2406 || RIGHT:    6319, read    6320.
 done        1500 samples.
+Error: expected LEFT:   -2228, read   -2227 || RIGHT:    5056, read    5056.
+Error: expected LEFT:   -1869, read   -1868 || RIGHT:    2527, read    2528.
+Error: expected LEFT:   -1690, read   -1689 || RIGHT:    1264, read    1264.
+Error: expected LEFT:   -1511, read   -1510 || RIGHT:      -1, read       0.
+Error: expected LEFT:   -1332, read   -1331 || RIGHT:   -1264, read   -1264.
+Error: expected LEFT:   -1594, read   -1593 || RIGHT:   -2689, read   -2688.
+Error: expected LEFT:   -2036, read   -2035 || RIGHT:   -2848, read   -2848.
+Error: expected LEFT:   -2477, read   -2476 || RIGHT:   -3009, read   -3008.
+Error: expected LEFT:   -2919, read   -2918 || RIGHT:   -3168, read   -3168.
+Error: expected LEFT:   -3802, read   -3801 || RIGHT:   -3489, read   -3488.
+Error: expected LEFT:   -4244, read   -4243 || RIGHT:   -3648, read   -3648.
+Error: expected LEFT:   -4685, read   -4684 || RIGHT:   -3809, read   -3808.
+Error: expected LEFT:   -5127, read   -5126 || RIGHT:   -3968, read   -3968.
+Error: expected LEFT:   -5079, read   -5078 || RIGHT:   -4833, read   -4832.
+Error: expected LEFT:   -4589, read   -4588 || RIGHT:   -5536, read   -5536.
+Error: expected LEFT:   -4100, read   -4099 || RIGHT:   -6241, read   -6240.
+Error: expected LEFT:   -3610, read   -3609 || RIGHT:   -6944, read   -6944.
+Error: expected LEFT:   -2631, read   -2630 || RIGHT:   -8353, read   -8352.
+Error: expected LEFT:   -2141, read   -2140 || RIGHT:   -9056, read   -9056.
+Error: expected LEFT:   -1652, read   -1651 || RIGHT:   -9761, read   -9760.
+Error: expected LEFT:   -1162, read   -1161 || RIGHT:  -10464, read  -10464.
+Error: expected LEFT:    -749, read    -748 || RIGHT:  -10218, read  -10217.
+Error: expected LEFT:    -826, read    -825 || RIGHT:   -9268, read   -9267.
+Error: expected LEFT:    -903, read    -902 || RIGHT:   -8317, read   -8316.
+Error: expected LEFT:    -980, read    -979 || RIGHT:   -7367, read   -7366.
+Error: expected LEFT:   -1133, read   -1132 || RIGHT:   -5466, read   -5465.
+Error: expected LEFT:   -1210, read   -1209 || RIGHT:   -4516, read   -4515.
+Error: expected LEFT:   -1287, read   -1286 || RIGHT:   -3565, read   -3564.
+Error: expected LEFT:   -1364, read   -1363 || RIGHT:   -2615, read   -2614.
+Error: expected LEFT:   -2737, read   -2736 || RIGHT:   -1815, read   -1814.
+Error: expected LEFT:   -4032, read   -4032 || RIGHT:   -1965, read   -1964.
+Error: expected LEFT:   -5329, read   -5328 || RIGHT:   -2116, read   -2115.
+Error: expected LEFT:   -6624, read   -6624 || RIGHT:   -2266, read   -2265.
+Error: expected LEFT:   -9217, read   -9216 || RIGHT:   -2567, read   -2566.
+Error: expected LEFT:  -10512, read  -10512 || RIGHT:   -2717, read   -2716.
+Error: expected LEFT:  -11809, read  -11808 || RIGHT:   -2868, read   -2867.
+Error: expected LEFT:  -13104, read  -13104 || RIGHT:   -3018, read   -3017.
+Error: expected LEFT:  -12647, read  -12646 || RIGHT:   -2816, read   -2816.
+Error: expected LEFT:  -10893, read  -10892 || RIGHT:   -2465, read   -2464.
+Error: expected LEFT:   -9140, read   -9139 || RIGHT:   -2112, read   -2112.
+Error: expected LEFT:   -7386, read   -7385 || RIGHT:   -1761, read   -1760.
+Error: expected LEFT:   -3879, read   -3878 || RIGHT:   -1056, read   -1056.
+Error: expected LEFT:   -2125, read   -2124 || RIGHT:    -705, read    -704.
+Error: expected LEFT:    -372, read    -371 || RIGHT:    -352, read    -352.
+Error: expected LEFT:    1382, read    1382 || RIGHT:      -1, read       0.
+Error: expected LEFT:    4895, read    4896 || RIGHT:    1708, read    1708.
+Error: expected LEFT:    6655, read    6656 || RIGHT:    3065, read    3065.
+Error: expected LEFT:    9295, read    9296 || RIGHT:    5100, read    5100.
+Error: expected LEFT:   11055, read   11056 || RIGHT:    6457, read    6457.
+Error: expected LEFT:    5551, read    5552 || RIGHT:    2284, read    2284.
+Error: expected LEFT:    1295, read    1296 || RIGHT:    1926, read    1926.
 done        1600 samples.
+Error: expected LEFT:   -5089, read   -5088 || RIGHT:    1388, read    1388.
+Error: expected LEFT:   -9345, read   -9344 || RIGHT:    1030, read    1030.
+Error: expected LEFT:  -12052, read  -12051 || RIGHT:     803, read     803.
+Error: expected LEFT:  -10503, read  -10502 || RIGHT:     934, read     934.
+Error: expected LEFT:   -8954, read   -8953 || RIGHT:    1065, read    1065.
+Error: expected LEFT:   -7405, read   -7404 || RIGHT:    1196, read    1196.
+Error: expected LEFT:   -4308, read   -4307 || RIGHT:    1459, read    1459.
+Error: expected LEFT:   -2759, read   -2758 || RIGHT:    1590, read    1590.
+Error: expected LEFT:   -1210, read   -1209 || RIGHT:    1721, read    1721.
+Error: expected LEFT:    8492, read    8492 || RIGHT:    -180, read    -179.
+Error: expected LEFT:   11795, read   11795 || RIGHT:   -1261, read   -1260.
+Error: expected LEFT:   13446, read   13446 || RIGHT:   -1802, read   -1801.
+Error: expected LEFT:   15097, read   15097 || RIGHT:   -2343, read   -2342.
+Error: expected LEFT:   16748, read   16748 || RIGHT:   -2884, read   -2883.
+Error: expected LEFT:   13299, read   13299 || RIGHT:   -1537, read   -1536.
+Error: expected LEFT:    8198, read    8198 || RIGHT:     351, read     352.
+Error: expected LEFT:     547, read     547 || RIGHT:    3183, read    3184.
+Error: expected LEFT:   -2004, read   -2003 || RIGHT:    4128, read    4128.
+Error: expected LEFT:   -4554, read   -4553 || RIGHT:    5071, read    5072.
+Error: expected LEFT:   -5866, read   -5865 || RIGHT:    5119, read    5120.
+Error: expected LEFT:   -4628, read   -4627 || RIGHT:    4224, read    4224.
+Error: expected LEFT:   -3389, read   -3388 || RIGHT:    3327, read    3328.
+Error: expected LEFT:   -2151, read   -2150 || RIGHT:    2432, read    2432.
+Error: expected LEFT:     326, read     326 || RIGHT:     639, read     640.
+Error: expected LEFT:    2803, read    2803 || RIGHT:   -1153, read   -1152.
+Error: expected LEFT:    4652, read    4652 || RIGHT:   -1556, read   -1555.
+Error: expected LEFT:    4025, read    4025 || RIGHT:    -167, read    -166.
+Error: expected LEFT:    -365, read    -364 || RIGHT:    9555, read    9555.
+Error: expected LEFT:    -509, read    -508 || RIGHT:   10015, read   10016.
+Error: expected LEFT:     -26, read     -25 || RIGHT:    9088, read    9088.
+Error: expected LEFT:     457, read     457 || RIGHT:    8159, read    8160.
+Error: expected LEFT:    1907, read    1907 || RIGHT:    5375, read    5376.
+Error: expected LEFT:    2873, read    2873 || RIGHT:    3519, read    3520.
+Error: expected LEFT:    5971, read    5971 || RIGHT:    2015, read    2016.
+Error: expected LEFT:    8102, read    8102 || RIGHT:    2367, read    2368.
+Error: expected LEFT:   11299, read   11299 || RIGHT:    2895, read    2896.
+Error: expected LEFT:   13430, read   13430 || RIGHT:    3247, read    3248.
+Error: expected LEFT:    -212, read    -211 || RIGHT:     569, read     569.
+Error: expected LEFT:   -1853, read   -1852 || RIGHT:    -346, read    -345.
+Error: expected LEFT:   -3495, read   -3494 || RIGHT:   -1261, read   -1260.
+Error: expected LEFT:   -6778, read   -6777 || RIGHT:   -3092, read   -3091.
+Error: expected LEFT:   -8420, read   -8419 || RIGHT:   -4007, read   -4006.
+Error: expected LEFT:  -10061, read  -10060 || RIGHT:   -4922, read   -4921.
+Error: expected LEFT:  -11703, read  -11702 || RIGHT:   -5837, read   -5836.
+Error: expected LEFT:  -11696, read  -11696 || RIGHT:   -7495, read   -7494.
+Error: expected LEFT:  -10049, read  -10048 || RIGHT:   -8237, read   -8236.
+Error: expected LEFT:   -8400, read   -8400 || RIGHT:   -8980, read   -8979.
 done        1700 samples.
-done        1800 samples.
-done        1900 samples.
-done        2000 samples.
-done        2100 samples.
-done        2200 samples.
-done        2300 samples.
-done        2400 samples.
-done        2500 samples.
-done        2600 samples.
-done        2700 samples.
-done        2800 samples.
-done        2900 samples.
-done        3000 samples.
-done        3100 samples.
-done        3200 samples.
-done        3300 samples.
-done        3400 samples.
-done        3500 samples.
-done        3600 samples.
-done        3700 samples.
-done        3800 samples.
-done        3900 samples.
-done        4000 samples.
-done        4100 samples.
-done        4200 samples.
-done        4300 samples.
-done        4400 samples.
-done        4500 samples.
-done        4600 samples.
-done        4700 samples.
--------------------------------------------------------
-
-          #####     ##     ####    ####
-          #    #   #  #   #       #
-          #    #  #    #   ####    ####
-          #####   ######       #       #
-          #       #    #  #    #  #    #
-          #       #    #   ####    ####
-
--------------------------------------------------------
-
-Stopped at time : 100521169005 ps(1) :  in File "C:/Git/Title_to_be_defined/lab3/src/verilog-tb/verilog-tasks.v" Line 116 
+Error: expected LEFT:   -6753, read   -6752 || RIGHT:   -9722, read   -9721.
+Error: expected LEFT:   -3456, read   -3456 || RIGHT:  -11207, read  -11206.
+Error: expected LEFT:   -1809, read   -1808 || RIGHT:  -11949, read  -11948.
+Error: expected LEFT:    -160, read    -160 || RIGHT:  -12692, read  -12691.
+Error: expected LEFT:    1487, read    1488 || RIGHT:  -13434, read  -13433.
+Error: expected LEFT:    1859, read    1859 || RIGHT:  -13706, read  -13705.
+Error: expected LEFT:     582, read     582 || RIGHT:  -13236, read  -13235.
+Error: expected LEFT:    -695, read    -694 || RIGHT:  -12765, read  -12764.
+Error: expected LEFT:   -1972, read   -1971 || RIGHT:  -12295, read  -12294.
+Error: expected LEFT:   -4525, read   -4524 || RIGHT:  -11354, read  -11353.
+Error: expected LEFT:   -5802, read   -5801 || RIGHT:  -10884, read  -10883.
+Error: expected LEFT:   -7079, read   -7078 || RIGHT:  -10413, read  -10412.
+Error: expected LEFT:   -8356, read   -8355 || RIGHT:   -9943, read   -9942.
+Error: expected LEFT:   -9869, read   -9868 || RIGHT:   -8032, read   -8032.
+Error: expected LEFT:  -10106, read  -10105 || RIGHT:   -6593, read   -6592.
+Error: expected LEFT:  -10343, read  -10342 || RIGHT:   -5152, read   -5152.
+Error: expected LEFT:  -10580, read  -10579 || RIGHT:   -3713, read   -3712.
+Error: expected LEFT:  -11053, read  -11052 || RIGHT:    -832, read    -832.
+Error: expected LEFT:  -11290, read  -11289 || RIGHT:     607, read     608.
+Error: expected LEFT:  -11527, read  -11526 || RIGHT:    2048, read    2048.
+Error: expected LEFT:  -11764, read  -11763 || RIGHT:    3487, read    3488.
+Error: expected LEFT:  -10861, read  -10860 || RIGHT:    3283, read    3283.
+Error: expected LEFT:   -9722, read   -9721 || RIGHT:    1638, read    1638.
+Error: expected LEFT:   -8583, read   -8582 || RIGHT:      -7, read      -6.
+Error: expected LEFT:   -7444, read   -7443 || RIGHT:   -1652, read   -1651.
+Error: expected LEFT:   -5165, read   -5164 || RIGHT:   -4941, read   -4940.
+Error: expected LEFT:   -4026, read   -4025 || RIGHT:   -6586, read   -6585.
+Error: expected LEFT:   -2887, read   -2886 || RIGHT:   -8231, read   -8230.
+Error: expected LEFT:   -1748, read   -1747 || RIGHT:   -9876, read   -9875.
+Error: expected LEFT:   -1085, read   -1084 || RIGHT:   -9184, read   -9184.
+Error: expected LEFT:   -1562, read   -1561 || RIGHT:   -6849, read   -6848.
+Error: expected LEFT:   -2039, read   -2038 || RIGHT:   -4512, read   -4512.
+Error: expected LEFT:   -2516, read   -2515 || RIGHT:   -2177, read   -2176.
+Error: expected LEFT:   -3469, read   -3468 || RIGHT:    2496, read    2496.
+Error: expected LEFT:   -3946, read   -3945 || RIGHT:    4831, read    4832.
+Error: expected LEFT:   -4423, read   -4422 || RIGHT:    7168, read    7168.
+Error: expected LEFT:   -4900, read   -4899 || RIGHT:    9503, read    9504.
+Error: expected LEFT:   -3543, read   -3542 || RIGHT:   10335, read   10336.
+Error: expected LEFT:   -1709, read   -1708 || RIGHT:    8832, read    8832.
+Error: expected LEFT:     124, read     124 || RIGHT:    7327, read    7328.
+Error: expected LEFT:    5625, read    5625 || RIGHT:    2815, read    2816.
+Error: expected LEFT:    9292, read    9292 || RIGHT:    -193, read    -192.
+Error: expected LEFT:   12927, read   12928 || RIGHT:   -1917, read   -1916.
+Error: expected LEFT:   12896, read   12896 || RIGHT:    -634, read    -633.
+Error: expected LEFT:   12863, read   12864 || RIGHT:     649, read     649.
+Error: expected LEFT:   12767, read   12768 || RIGHT:    4499, read    4499.
+Error: expected LEFT:   12703, read   12704 || RIGHT:    7065, read    7065.
+Stopped at time : 37441984785 ps : File "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/src/verilog-tb/LM4550_digital_sim.v" Line 322

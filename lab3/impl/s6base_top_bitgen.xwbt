@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\up201909554\Desktop\Title_to_be_defined\lab3\impl\s6base_top.ncd
+OUTFILE=C:\Users\up201909554\Desktop\Title_to_be_defined\lab3\impl\s6base_top.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=C:\Users\up201909554\Desktop\Title_to_be_defined\lab3\impl
+LICENSE=ISE
+USER_INFO=175712216_178259120_210718015_146

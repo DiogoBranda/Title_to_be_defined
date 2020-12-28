@@ -6,7 +6,7 @@
 #----------------------------------------------------------
 
 NET "BIT_CLK" TNM_NET = "clock_freq";
-TIMESPEC "TS_clock_freq" = PERIOD "clock_freq" 5 ns HIGH 50 %;
+TIMESPEC "TS_clock_freq" = PERIOD "clock_freq" 75 ns HIGH 50 %;
 
 
 #NET PMOD1  OFFSET = OUT 0.3 ns AFTER clock;

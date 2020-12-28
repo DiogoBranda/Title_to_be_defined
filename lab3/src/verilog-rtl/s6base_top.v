@@ -9,7 +9,16 @@
 	and Computer Engineering requires explicit authorization from the author.
 	
 */
+/*
+	Additional changes made:
+	
+	Fix slide_switches;
+	Add Nfreq & M as inputs to module psdi_dsp to receive from uart
+	Add option to receive Nfreq & M as parameters [hardcode]
+	
+	by Diogo Silva(up201809213) & Joao Pereira(up20190954)
 
+*/
 `timescale 1ns/1ps
 
 
@@ -149,7 +158,7 @@ assign PMOD10 = 0;
 
 // join the 8 slide switch inputs to an 8-bit bus:
 wire [7:0] slide_switches;
-assign slide_switches = {sw7, sw6, sw5, sw5, sw4, sw3, sw2, sw1, sw0};
+assign slide_switches = {sw7, sw6, sw5, sw4, sw3, sw2, sw1, sw0};
 
 //---------------------------------------------------
 // global synchronous reset, active high
@@ -295,7 +304,7 @@ assign P2in={31'd0,RDY};
 //-------------------------------------------------------------------------------
 // Instantiate the RAM holding the FIR coefficients:
 wire [6:0]  addr_coefs;
-wire [15:0] dataout_coefs;
+wire [17:0] dataout_coefs;
 
 DPRAM #( .MEM_INIT_FILENAME("../simdata/FIR.hex") )
 
@@ -318,6 +327,13 @@ DPRAM #( .MEM_INIT_FILENAME("../simdata/FIR.hex") )
 //assign P7in[31:18] = {14{P7in[17]}};
 
 
+// Use of Nfreq e M as parameters instead of receiving from uart
+parameter [4:0] N_r = 5'd10;
+parameter [4:0] aux_r=5'd13;
+parameter [4:0] N_l = 5'd10;
+parameter [4:0] aux_l=5'd13;
+
+
 //-------------------------------------------------------------------------------
 // The example of DSP processing block:
 psdi_dsp   psdi_dsp_1(
@@ -335,11 +351,22 @@ psdi_dsp   psdi_dsp_1(
 			
 			.right_in( RIGHT_in ),
 			.left_in( LEFT_in ),
+			/*//Receive Nfreq e M from uart
+			.N_r(P8out[4:0]),
+			.M_r(P9out[4:0]),
+			.N_l(PAout[4:0]),
+			.M_l(PBout[4:0]),
+			*/
+			//Use of Nfreq e M as parameters instead of receiving from uart
+			.N_r(N_r),
+			.M_r(aux_r),
+			.N_l(N_l),
+			.M_l(aux_l),
 			
 			.right_out( RIGHT_out ),
 			.left_out( LEFT_out )
 		    );
-
+//.out8(P8out), .out9(P9out), .outa(PAout), .outb(PBout),
 	
 //-------------------------------------------------------------------------------
 // Generate the output mono signal rectified to view in the LEDs the 

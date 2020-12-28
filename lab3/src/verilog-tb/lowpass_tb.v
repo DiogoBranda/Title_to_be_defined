@@ -3,7 +3,7 @@ PSD 2020/21
 Lab 1 - Design and verification of a sequential non-restoring divider
 */
 `timescale 1ns/1ns
-`include "lowpass.v"
+//`include "lowpass.v"
 
 module lowpass_tb;
   
@@ -18,6 +18,10 @@ reg  [17:0] datain;
 wire [17:0] coefdata;
 wire [17:0] dataout;
 wire [ 6:0] coefaddress;
+wire [17:0] P7in;
+
+
+
 
 lowpass lowpass_1
 
@@ -134,7 +138,7 @@ begin
   Men[64]<=18'h00000;
 	
   # (10*CLOCK_PERIOD )
-	execdivide( 18'h00000, 1 ); // call task
+  execdivide( 18'h00000, 1 ); // call task
   execdivide( 18'h3FFEA, 2 );
   execdivide( 18'h00181, 3 );
   execdivide( 18'h001FC, 4 );
@@ -145,6 +149,12 @@ begin
   execdivide( 18'h001DD, 9 );
   execdivide( 18'h001C3, 10 );
   execdivide( 18'h001C4, 11 );
+  execdivide( 18'h001D4, 12 );
+  execdivide( 18'h001A6, 13 );
+  execdivide( 18'h001FA, 14 );
+  execdivide( 18'h001DE, 15 );
+  execdivide( 18'h001FE, 16 );
+  execdivide( 18'h00201, 17 );
  
 	$stop;
 

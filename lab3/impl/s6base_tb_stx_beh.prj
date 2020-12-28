@@ -1,3 +1,7 @@
+verilog isim_temp "../src/verilog-rtl/requantize.v"
+verilog isim_temp "../src/verilog-rtl/lowpass.v"
+verilog isim_temp "../src/verilog-rtl/interpol.v"
+verilog isim_temp "../src/verilog-rtl/downsample.v"
 verilog isim_temp "../src/verilog-rtl/uart.v"
 verilog isim_temp "../src/verilog-rtl/psdi_dsp.v"
 verilog isim_temp "../src/verilog-rtl/LM4550_controler.v"

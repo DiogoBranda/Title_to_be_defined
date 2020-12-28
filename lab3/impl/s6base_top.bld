@@ -3,15 +3,16 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc
-C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf -p xc6slx45-csg324-3
-s6base_top.ngc s6base_top.ngd
+C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/src/data/s6base.ucf -p
+xc6slx45-csg324-3 s6base_top.ngc s6base_top.ngd
 
-Reading NGO file "C:/Git/Title_to_be_defined/lab3/impl/s6base_top.ngc" ...
+Reading NGO file
+"C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/s6base_top.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file
-"C:/Git/Title_to_be_defined/lab3/src/data/s6base.ucf" ...
+"C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/src/data/s6base.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 Done...
@@ -29,10 +30,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 4413068 kilobytes
+Total memory usage is 4452628 kilobytes
 
 Writing NGD file "s6base_top.ngd" ...
-Total REAL time to NGDBUILD completion:  6 sec
-Total CPU time to NGDBUILD completion:   6 sec
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "s6base_top.bld"...

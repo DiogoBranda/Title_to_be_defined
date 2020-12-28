@@ -1,0 +1,4 @@
+verilog isim_temp "../src/verilog-rtl/lowpass.v"
+verilog isim_temp "../src/verilog-rtl/DPRAM.v"
+verilog isim_temp "../src/verilog-tb/lowpass_tb.v"
+verilog isim_temp "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

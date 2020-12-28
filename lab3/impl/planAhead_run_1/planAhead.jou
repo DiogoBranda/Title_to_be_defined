@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Wed Dec 23 17:07:59 2020
+# Process ID: 7956
+# Log file: C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/impl/pa.fromNetlist.tcl

@@ -6,10 +6,10 @@ run
 -ofmt NGC
 -p xc6slx45-3-csg324
 -top s6base_top
--opt_mode Speed
+-opt_mode Area
 -opt_level 2
 -power NO
--uc "C:/Git/Title_to_be_defined/lab3/src/data/s6base.xcf"
+-uc "C:/Users/up201909554/Desktop/Title_to_be_defined/lab3/src/data/s6base.xcf"
 -iuc NO
 -keep_hierarchy No
 -netlist_hierarchy As_Optimized
